@@ -23,8 +23,8 @@ public class linearSearch {
     System.out.print("Enter searching element : ");
     find=sc.nextInt();
     int key=search(arr,find);
-    if(key!=1){
-        System.out.print("Element is present at index"+key);
+    if(key!=-1){
+        System.out.print("Element is present at index "+key);
     }
     else{
         System.out.print("Element not found");
