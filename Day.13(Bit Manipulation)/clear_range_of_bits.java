@@ -12,5 +12,6 @@ public class clear_range_of_bits{
         int bitMask=a|b;//11100011
         int x=n&bitMask;//00000010
         System.out.print(x);
+        
     }
 }
