@@ -11,7 +11,6 @@ public class h_copy_constructor{
         System.out.println("p2's values");
         p2.getValues();
 
-        //kepp in mind that when we create a copy constructor and point the values that new object to attributes of object being copied then we are creating a new memory for this object attribute,we just refrencing the attributes of this new object to the previous object mean if we change the values of p1 here then p2's valaues will be also changed as p2 is not creating its own new variables it is just refrencing the attributs of p1
         p1.color="green";
         //now lets print values of both objects
         //p1
