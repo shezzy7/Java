@@ -52,3 +52,6 @@ class Bank{
 
 
 }
+//Note:In java we declare classes as public,default but we can't make any class private or protected
+//And we can make our constructors,attributes,fields and sub-classes as default,public,protected or private.
+

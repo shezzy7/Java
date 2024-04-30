@@ -1,5 +1,6 @@
 public class compressString{
     public static String compress(String str){
+        //We are given a string and we have to remove all the adjacent duplicated of this string mean if we are given "aabcccccddedd" then we havt to convert it to "abcded".
         //simple method
         
         // String compressedStr = "";
