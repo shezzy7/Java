@@ -1,6 +1,6 @@
 public class a_intro{
     public static void decreasingOrder(int n){
-
+        // Static:This keyword means that the method belongs to the class rather than to any particular instance(object) of the class. It can be called without creating an instance of the class.
         if(n==1){//base case
             System.out.print(n);
             return;
