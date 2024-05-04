@@ -9,6 +9,7 @@ public class f_fibonacci{
         return fibnm1+fibnm2;
     }
     public static void main(String args[]){
+        //calculate last fibbonacci of n
         int n=7;
         int res = fib(n);
         System.out.println("Fibonacci of "+n+" is = "+res);
