@@ -47,7 +47,7 @@ public class f_assignment{
             int current=arr[i];
             int prev=i-1;
             while(prev>=0 && current>arr[prev]){
-                arr[prev+1]=current;
+                arr[prev+1]=arr[prev];
                 prev--;
             }
             arr[prev+1]=current;
@@ -56,6 +56,31 @@ public class f_assignment{
         for(int i=0;i<n;i++){
             System.out.print(arr[i]+" ");
         }
+    }
+
+    public static void counting(int arr[],int n){
+        int max = Integer.MIN_VALUE;
+        for(int i=0;i<n;i++){
+            max=Math.max(max,arr[i]);
+        }
+        int count[]=new int [max+1];
+        for(int i=0;i<n;i++){
+            count[arr[i]]++;
+        }
+        int j=0;
+        for(int i=max;i>=0;i--){
+            while(count[i]>0){
+                arr[j]=i;
+                count[i]--;
+                j++;
+            }
+        }
+        System.out.println("Sorted in descending order using counting sort");
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i]+" ");
+        }
+
+
     }
     public static void main(String args[]){
         int arr[]={3,6,2,1,8,7,4,5,3,1};
@@ -67,6 +92,9 @@ public class f_assignment{
         // selection(arr,arr.length);
 
         //Q3-Sort the given array in descending order using insertion sort
-        insertion(arr,arr.length);
+        // insertion(arr,arr.length);
+        
+        //Q4-Sort the given array in descending order using counting sort
+        counting(arr,arr.length);
     }
 }
