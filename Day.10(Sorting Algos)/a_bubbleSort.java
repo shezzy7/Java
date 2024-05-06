@@ -1,5 +1,5 @@
 import java.util.*;
-public class bubbleSort{
+public class a_bubbleSort{
     //concept of bubble sort is that repeatedly swap adjacent elements if in wrong order
     public static void bubble(int n,int array[]){
         boolean swap = false;
@@ -31,5 +31,7 @@ public class bubbleSort{
             array[i] = sc.nextInt();
         }
         bubble(n,array);
+        
+        //Time complexity O(n^2)
     }
 }
