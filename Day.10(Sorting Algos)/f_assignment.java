@@ -92,9 +92,9 @@ public class f_assignment{
         // selection(arr,arr.length);
 
         //Q3-Sort the given array in descending order using insertion sort
-        // insertion(arr,arr.length);
+        insertion(arr,arr.length);
         
         //Q4-Sort the given array in descending order using counting sort
-        counting(arr,arr.length);
+        // counting(arr,arr.length);
     }
 }
