@@ -8,8 +8,6 @@ public class a_mergeSort{
         mergSort(arr,mid+1,ei);
         merge(arr,si,mid,ei);
 
-
-
     }
     public static void merge(int arr[],int si,int mid,int ei){
         int i=si,j=mid+1,k=0;
