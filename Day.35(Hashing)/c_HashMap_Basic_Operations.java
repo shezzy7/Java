@@ -19,8 +19,7 @@ public class c_HashMap_Basic_Operations{
         System.out.println(pop);
 
 
-        //Get
-        //If we want to get value of any key the we use 'get' method for this
+        //Get:- If we want to get value of any key the we use 'get' method for this
         //Synatx -> HashMapName.get(key);
         //this method returns value with time complexity of O(1)
         System.out.println(pop.get("Pak"));
@@ -28,7 +27,41 @@ public class c_HashMap_Basic_Operations{
         System.out.println(pop.get("USA"));
 
 
+        //containsKey :- It is used to check prescence of any key in the HashMap
+        //Syntax->  HashMapName.containsKey(keyName);
+        //It returns true if key is present else false is returned
+        System.out.println(pop.containsKey("Pak"));//true
+        System.out.println(pop.containsKey("UAE"));//false
+        //we can also store this value in any variable like
+        boolean a = pop.containsKey("Ind");
 
+
+        //remove:- It is used to remove any (key,value) pair from HashMap.After removing it also return value of that key.
+        //syntax->  hashMapName.remove(keyName);
+        //And if given key is not present in the hashMap then no error will be generated only null value will be return
+        System.out.println(pop.remove("China"));//key,value pair will be also removed and value of this key will be also returned
+        System.out.println(pop.remove("Afg"));//null
+        //let print our whole hashmap now 
+        System.out.println(pop);
+
+        //size:- This method is used to get size of hashmap.It counts (key,value) pair entry as single.Mean if there are three key,value pairs then it will return 3 as size of hashmap.
+        //syntax->  hashmapName.size();
+        System.out.println(pop.size());
+
+        
+        //isEmpty:-it is used to check whether our hashMap is empty or not.If empty then true will be returned else false will be returned.
+        //Syntax->  hashMapName.isEmpty();
+        System.out.println(pop.isEmpty());//false will be output as our hashmap contains some values.
+
+
+        //clear:-This method is used to clear all data of HashMap.It will mmake ouur whole hashmap empty.
+        //syntax->  hashmapName.clear();
+        //this method does not return values of hashmap after.It just clears them
+        pop.clear();
+        //let now check whether our hashMap is empty or not
+        boolean res = pop.isEmpty();
+        System.out.println(res); 
+        
 
 
 
