@@ -1,4 +1,4 @@
-public class a_Hashing{
+public class A_Hashing{
     public static void main(String args[]){
         //Hashing:- It is a techniue through which we can convert one form of data to another form.We do this through a hash function.
         //By using hashing we get two other data structures i-map  and  ii-set

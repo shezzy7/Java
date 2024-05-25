@@ -1,7 +1,7 @@
 //first of all for using hashmap in code we have to add library
 // import java.util.HashMap;  or
 import java.util.*;
-public class c_HashMap_Basic_Operations{
+public class C_HashMap_Basic_Operations{
     public static void main(String args[]){
         //lets create a hashmap for storing population of some countries with counntry name and population counnt  
         HashMap<String,Integer> pop = new HashMap<>();
@@ -14,7 +14,7 @@ public class c_HashMap_Basic_Operations{
         //time complexity of 'put' is O(1)
         //if we see output the we will see that data will not be available the sequence in which it was inserted.So it means that data in HashMap does not stored in some particular sequence.It is store in randome sequence.
         System.out.println(pop);
-        //If we want to update value of some key the we will use same put method where we will write out keyName and new value we want to assign to our Key .For example if we want to update "Chhina"'s population to 130 then
+        //If we want to update value of some key then we will use same put method where we will write out keyName and new value we want to assign to our Key .For example if we want to update "China"'s population to 130 then
         pop.put("China",130);//this will see if any key with same name is existed then it will just change its value,other wise it will add this one also.And it will not create more then one keys with same 
         System.out.println(pop);
 

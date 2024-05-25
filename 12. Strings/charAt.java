@@ -2,7 +2,7 @@ import java.util.*;
 public class charAt{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        //we can also access each element of a string un=sing charAt function
+        //we can also access each element of a string using charAt method
         //syntax ->     stringName.charAt(index);
 
         String uni = "GC uni FSD";
