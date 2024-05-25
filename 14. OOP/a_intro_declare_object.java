@@ -2,7 +2,7 @@ public class a_intro_declare_object{
     public static void main(String args[]){
         //we declare objects by using name of class as their type
         //if we want to declare an object of Pen class then
-        //Syntax-> className objName = new className();
+        //Syntax-> className objza\Name = new className();
         Pen p1 = new Pen();
         //object can use attributes and function of its class by their name using '.' between
         p1.color="Blue";
@@ -51,9 +51,9 @@ class Student{
     int age;
 
     void setName(String newName){
-        name=newName;
+        name = newName;
     }
     void setAge(int newAge){
-        age=newAge;
+        age = newAge;
     }
 }
