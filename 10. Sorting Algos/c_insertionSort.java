@@ -1,7 +1,7 @@
 import java.util.*;
 public class c_insertionSort{
     public static void insertionSort(int arr[]){
-        //In counting sort we assume a part of array as sorted and then take an element from unsorted part and place it at its right position in sorted and keep doing this untill whole array becomes sorted.
+        //In insertion sort we assume a part of array as sorted and then take an element from unsorted part and place it at its right position in sorted and keep doing this untill whole array becomes sorted.
         //here we are starting our loop from 1 index bcz we are assuming 0 index as sorted part
         for(int i=1;i<n;i++){
             int current = arr[i];
