@@ -3,6 +3,7 @@ public class k_tilling{
         if(n==0 || n==1){
             return 1;
         }
+        
         int fnm1 = ways(n-1);
 
         int fnm2 = ways(n-2);

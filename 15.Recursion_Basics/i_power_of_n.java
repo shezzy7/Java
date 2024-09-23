@@ -10,8 +10,14 @@ public class i_power_of_n{
     public static void main(String args[]){
         int n=3;
         int pow=4;
-        System.out.print(n*res(n,pow-1));
-
+        System.out.println("Power of "+n+" by "+pow+" using recursion is = "+n*res(n,pow-1));
+        
+        int i=1,res=1;
+        while(i<=pow){
+            res*=n;
+            i++;
+        }
+        System.out.print("Result using loop = "+res);
         //time complexity-> O(n)
     }
 }
