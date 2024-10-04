@@ -1,19 +1,22 @@
-public class e_nQueens{
-    public static void setQueens(char board[][],int row){
+public class f_nQueens2{
+    public static boolean setQueens(char board[][],int row){
         //base case
         if(row==board.length){
-            printBoard(board);
-            return;
+            
+            return true;
         }
         //kaam
         for(int j=0;j<board.length;j++){
             if(isSafe(board,row,j)){
                 board[row][j]='Q';
-                setQueens(board,row+1);//recursion step
-                board[row][j]='x';//backtracking step
+                if(setQueens(board,row+1)){
+                    return true;
+                }
+                board[row][j]='x';
             }
 
         }
+        return false;
     }
     //isSafe to set a queen here 
     public static boolean isSafe(char board[][],int row,int col){
@@ -51,6 +54,8 @@ public class e_nQueens{
         System.out.println();
     }
     public static void main(String args[]){
+        // In this question we have to check whether there eixist a way to place our queens in n*n matrix.
+        //If there exist some ways to place queens then we have to print only one of them.
         int n=4;
         char board[][] = new char[n][n];
         for(int i=0;i<n;i++){
@@ -58,6 +63,13 @@ public class e_nQueens{
                 board[i][j]='x';
             }
         }
-        setQueens(board,0);
+       if (setQueens(board,0)){
+         System.out.println("Solution exists for this board");
+         printBoard(board);
+       }
+       else{
+         System.out.println("Solution does not exists for this board");
+
+       }
     }
 }
