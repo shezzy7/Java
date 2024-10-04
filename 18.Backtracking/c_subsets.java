@@ -17,6 +17,7 @@ public class c_subsets{
         // Second step where this character can make a choice of not to be a part of this subset and we will be not add it to this subset while making a call for next character.Actually this step is a step of backtracking
         subsets(str,res,i+1);
     }
+
     public static void main(String args[]){
         String str = "abc";
         subsets(str,"",0);
