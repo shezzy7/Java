@@ -6,7 +6,7 @@ public class h_multi_dimensional_arrayList{
         //for adding a list in this multidimensional array list first we define a list and then add this in multidimensioanl list
         ArrayList<ArrayList<Integer>> mainList = new ArrayList<>();
         //for adding a llist in this main list lets create a 1 dimensional arraylist first
-        Arraylist<Integer> list = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
         list.add(1); 
         list.add(2); 
         list.add(3); 
@@ -34,8 +34,8 @@ public class h_multi_dimensional_arrayList{
         //list1 -> 1,2,3,4,5
         //list2 -> 2,4,6,8,10
         //list3 -> 3,6,9,12,15
-        ArrayList<Integer> mainList2 = new ArrayList<>();
-        ArrayList<Integer> list3 = new Arraylist<>();
+        ArrayList<ArrayList<Integer>> mainList2 = new ArrayList<>();
+        ArrayList<Integer> list3 = new ArrayList<>();
         ArrayList<Integer> list4 = new ArrayList<>();
         ArrayList<Integer> list5 = new ArrayList<>();
         for(int i=1;i<=5;i++){
