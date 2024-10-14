@@ -31,24 +31,22 @@ public class F_levelOrderTraversal {
         List<Integer> temp = new ArrayList<>();
         Queue<Node> q = new LinkedList<>();
         q.add(root);
-        q.add(null);
+        q.add(null);//adding a null which will identify that we have completed a level.
         while(!q.isEmpty() && q.peek()!=null){
-            if(q.peek().left!=null){
-
+            if(q.peek().left!=null){//if current node has a left child then add it to queue.
                 q.add(q.peek().left);
             }
-            if(q.peek().right!=null){
-
+            if(q.peek().right!=null){ //if current node has a right child then add it to queue.
                 q.add(q.peek().right);
             }
-            temp.add(q.peek().data);
-            System.out.print(q.remove().data+" ");
-            if(q.peek()==null){
+            temp.add(q.peek().data);//add each element in temp list.
+            System.out.print(q.remove().data+" ");//after adding it remove it from queue.
+            if(q.peek()==null){//after adding current node and removing it from queue,check wheather there present a null on peek of queue.As we only add null in queue just to identify the completion of traversal of a level.So if we have completed a level the we have to add it to our ans list and make our temp list as empty for adding elements of next level in it.
                 ls.add(new ArrayList<>(temp));
-                q.remove();
-                temp = new ArrayList<>();
-                System.out.println();
-                if(!q.isEmpty()){
+                q.remove();//remove null from queue
+                temp = new ArrayList<>();//make temp empty
+                System.out.println();//print a next line which shows the end of a level.
+                if(!q.isEmpty()){//now we will check wheather our queue has become empty or not.It will only be empty if the node that we have remove from queue during this level does not contians any left or right child.Then it means that we have to add a null in queue after those childs which will later identifiy us completion of level.Else it means that we ave traversed over our whole tree and now we don't need to add null in our queue.
                     q.add(null);
                 }
             }
