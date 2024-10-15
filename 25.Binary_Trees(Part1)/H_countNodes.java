@@ -1,4 +1,4 @@
-public class K_countNodes {
+public class H_countNodes {
     static class Node{
         int data;
         Node right,left;
