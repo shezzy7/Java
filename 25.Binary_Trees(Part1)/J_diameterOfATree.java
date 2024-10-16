@@ -55,6 +55,7 @@ public class J_diameterOfATree{
         }
     }
     public static void main(String[] args) {
+        
         int nodes[] = {1,2,3,-1,-1,4,-1,-1,5,6,-1,-1,7,-1,-1};
         BinaryTree tree = new BinaryTree();
         Node root = tree.buildTree(nodes);
