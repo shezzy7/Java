@@ -56,7 +56,7 @@ public class a_subtreeInTree{
         if(Root==null){
             return false;
         }
-        if(Root.data==subRoot.data){
+        if(Root.data==subRoot.data){//if value of both nodes is same then it means that we have found a node from which we can start checking and comparing our other nodes of both tree. 
             if(isIdentical(Root,subRoot)){
                 return true;
             }
@@ -69,6 +69,8 @@ public class a_subtreeInTree{
         BinaryTree tree = new BinaryTree();
         Node Root = tree.buildTree(nodes);
         Node subRoot = tree.buildTree2(nodes2);
+
+        //We are given a root and a subroot of a tree.We have to see wheather the subroot tree is present in root tree or not.
         boolean res = isSubtree(Root,subRoot);
         System.out.println(res);
     }

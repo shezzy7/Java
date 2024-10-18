@@ -1,0 +1,15 @@
+Tress have a property named horizental distance.
+Horizontal Distance (HD): This is the measure of how far left or right a node is from the root. The root node itself is assigned a horizontal distance of 0.
+When moving to the left child of a node, the horizontal distance decreases by 1.
+When moving to the right child, the horizontal distance increases by 1.
+
+            1 (HD=0)
+            / \
+   (HD=-1) 2    3 (HD=1)
+         /       \
+(HD=-2) 4        5 (HD=2)
+Node 1 (the root) has HD = 0.
+Node 2 is the left child of 1, so its HD is -1.
+Node 3 is the right child of 1, so its HD is +1.
+Node 4 is the left child of 2, so its HD is -2.
+Node 5 is the right child of 3, so its HD is +2.
