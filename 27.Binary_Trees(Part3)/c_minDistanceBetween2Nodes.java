@@ -59,8 +59,8 @@ public class c_minDistanceBetween2Nodes {
         root.right.right = new Node(7);
         int n1 = 4 , n2 = 6;
         //We are a root node,n1 and n2.We have to find minimum difference between n1 and n2.Minimum diffrence between two nodes is the number of edges between these nodes.
-        //Approach: if we find lca(lowest common ancestor of these nodes and then from this lca we calculate distance of each node from this lowest common ancestor and add them.This will be equall to minimum distance between these nodes).
-        //lets find LCA
+        //Approach: if we find lca(lowest common ancestor) of these nodes and then from this lca we calculate distance of given nodes from this lowest common ancestor and add them.This will be equall to minimum distance between these nodes).
+        //lets find LCA of both nodes
         Node lca = findLca(root,n1,n2);
         
         //Now we to calculate distance of n1 from lca 
