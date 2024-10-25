@@ -1,0 +1,8 @@
+Binary Search Tree is a evolved version of Binary Tree.It is known as BST.We use BST for fast lookup.Time complexity in Binary Tree for any operation remain O(n) often times.But in BST it is reduced to height of tree.
+A Binary Search Tree contiains all the properties of a Binary Tree.But additonaly it has following major properties:-
+1-> Left subtree Nodes < root
+2 - Right subtree nodes > root
+3 - Left & Right Subtree are aslo BST with no duplicates.
+
+            
+            
