@@ -32,7 +32,7 @@ public class b_BST {
     }
     public static void main(String[] args) {
         int values[] = {5,1,3,4,2,7};
-        // We are given an array of values , we have to build a Binary Search Tree using these values.
+        // We are given an array of values, we have to build a Binary Search Tree using these values.
         Node root = null;
         for(int i=0;i<values.length;i++){
             root = buildBST(root, values[i]);
