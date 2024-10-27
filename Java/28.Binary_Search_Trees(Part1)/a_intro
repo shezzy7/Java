@@ -1,0 +1,16 @@
+Binary Search Tree is a evolved version of Binary Tree.It is known as BST.We use BST for fast lookup.Time complexity in Binary Tree for any operation remain O(n) often times.But in BST it is reduced to height of tree.
+A Binary Search Tree contiains all the properties of a Binary Tree.But additonaly it has following major properties:-
+1-> Left subtree Nodes < root
+2 - Right subtree nodes > root
+3 - Left & Right Subtree are aslo BST with no duplicates.
+
+                        
+                        5
+                      /   \
+                     3      7
+                   /  \    / \
+                  1    4   6  8
+         
+Inorder traversal of a BST gives a sorted sequence.If make a inorder traversal of above binary search tree then the output will be -> 1,3,4,5,6,7,8  which is a sorted sequence.ANd this property helps us a lot in finding solution of many problems.
+
+If we try to search a target element in out tree then we can find it with time complexity of O(log n). 
