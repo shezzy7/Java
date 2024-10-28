@@ -27,7 +27,8 @@ public class e_sumInRange{
         }
 
         int k1 = 5 , k2 = 12 ;
-        
+
+        //we are given a root node of a tree ,two integers k1 and k2, we have to print all the nodes whose values lie between k1 and k2.
 
 
 
