@@ -19,6 +19,24 @@ public class e_sumInRange{
         }
         return root;
     }
+
+    public static void printInRange(Node root , int k1 , int k2 ){
+        if(root == null){
+            return;
+        }
+
+        if(root.val>=k1 && root.val<=k2){
+            printInRange(root.left, k1, k2);
+            System.out.print(root.val+" ");
+            printInRange(root.right, k1, k2);
+        }
+        else if( root.val > k2 ){
+            printInRange(root.left, k1, k2);
+        }
+        else{
+            printInRange(root.right, k1, k2);
+        }
+    }
     public static void main(String args[]){
         int values[] = { 8 , 5 , 6 , 3 , 4 , 1 , 10 , 11 , 14 };
         Node root = null;
@@ -29,7 +47,7 @@ public class e_sumInRange{
         int k1 = 5 , k2 = 12 ;
 
         //we are given a root node of a tree ,two integers k1 and k2, we have to print all the nodes whose values lie between k1 and k2.
-
+        printInRange(root,k1,k2);
 
 
     }
