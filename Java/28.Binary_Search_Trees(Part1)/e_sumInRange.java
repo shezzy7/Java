@@ -25,15 +25,17 @@ public class e_sumInRange{
             return;
         }
 
-        if(root.val>=k1 && root.val<=k2){
-            printInRange(root.left, k1, k2);
-            System.out.print(root.val+" ");
-            printInRange(root.right, k1, k2);
+        if(root.val>=k1 && root.val<=k2){//if root's value is between k1 and k2 then we have to got to both left side and right side.
+            printInRange(root.left, k1, k2);//check left side
+            System.out.print(root.val+" ");//print root node
+            printInRange(root.right, k1, k2);//check right side
         }
-        else if( root.val > k2 ){
+        else if( root.val > k2 ){//else if root's value  is greater than k2 then we have to go to left side only.
+
             printInRange(root.left, k1, k2);
         }
-        else{
+        else{ // else if root's value is less than k1 then we have to go to right side only.
+
             printInRange(root.right, k1, k2);
         }
     }
