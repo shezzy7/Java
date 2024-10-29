@@ -31,7 +31,7 @@ public class f_pathToLeafNodes {
         if(root==null){
             return;
         }
-        list.add(root.val);
+        list.add(root.val);//first add the node in list
         if(root.left==null && root.right==null){
             printPath(list);
             list.remove(list.size()-1);
