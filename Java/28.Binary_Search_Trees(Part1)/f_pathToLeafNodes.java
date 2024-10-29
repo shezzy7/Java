@@ -32,18 +32,18 @@ public class f_pathToLeafNodes {
             return;
         }
         list.add(root.val);//first add the node in list
-        if(root.left==null && root.right==null){
+        if(root.left==null && root.right==null){//if left and right of current node are null then it means that this node is a leaf node and it's the completion of a path,we will print this path 
             printPath(list);
-            list.remove(list.size()-1);
+            list.remove(list.size()-1);//after print the path we will also remove the leaf node from our list.
             return;
         }
-        pathsToLeafNodes(root.left, list);
+        pathsToLeafNodes(root.left, list);//after adding the current node and cheking that this node has some child nodes we will go to its child nodes(left subtree and right subtree).
         pathsToLeafNodes(root.right, list);
 
 
     }
     public static void main(String[] args) {
-        int values[] = { 8 , 5 , 6 , 3 , 4 , 1 , 10 , 11 , 14 };
+        int values[] = { 8 , 5 , 3 ,  1 , 4 , 6 ,  10 , 11 , 14 };
         Node root = null;
         for(int i=0;i<values.length;i++){
             root = buildBST(values[i], root);
