@@ -35,10 +35,11 @@ public class f_pathToLeafNodes {
         if(root.left==null && root.right==null){//if left and right of current node are null then it means that this node is a leaf node and it's the completion of a path,we will print this path 
             printPath(list);
             list.remove(list.size()-1);//after print the path we will also remove the leaf node from our list.
-            return;
+            return;//as the root don't have any child so we don't need to go in its left or right side.
         }
         pathsToLeafNodes(root.left, list);//after adding the current node and cheking that this node has some child nodes we will go to its child nodes(left subtree and right subtree).
         pathsToLeafNodes(root.right, list);
+        list.remove(list.size()-1);
 
 
     }
