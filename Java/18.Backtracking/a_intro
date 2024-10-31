@@ -1,0 +1,7 @@
+Backtracking:- Backtracking is an advance level of recursion.Basically from word backtracking we can get its meaning which says 'back path'.In this method we apply some methods to solve a problem if one method does not giving right answer so we backtrack from there we are present and go to new method.And if this method also does not work then we backtrack from this method and go to other method for finding our solution.
+It is like 'Maze Game'.
+Backtracking has three types:
+    1-Decision(Make a descion whether solution for this problem exists are not).
+    2-Optimization(Have many solution and now have to find which is best from all of them)
+    3-Enumeration(List out all the possible solutions)
+For example we have to go from one place to other then first of all we will make desicion whether there exist a way to go there or not.Once the desicion has been madded now we have to find optimized path to there.Then at last we have to make a list a of how many ways exist to go there.
