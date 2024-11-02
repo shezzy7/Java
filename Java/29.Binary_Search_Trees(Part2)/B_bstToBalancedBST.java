@@ -74,7 +74,7 @@ public class B_bstToBalancedBST {
          */ 
 
          //Approach : if get inorder sequence of given tree and store it in an arraylist.From this arraylist we can make a BST as we have done befor.
-         //print pre-order before\
+         //print pre-order before
          System.out.print("Pre-Order efore : ");
          printPreOrder(root);
          root = convertToBST(root);
