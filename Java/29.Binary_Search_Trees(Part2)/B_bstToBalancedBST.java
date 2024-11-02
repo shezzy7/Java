@@ -61,7 +61,17 @@ public class B_bstToBalancedBST {
                      6      10
                    /         \
                   5           11
-       */
+                /               \
+               3                 12
+         */ 
+        //We have to convert this BST to a height balanced binary search tree.
+         /*
+                        8
+                      /   \
+                     5      11
+                   /  \     / \
+                  3    6   10  12
+         */ 
 
          //Approach : if get inorder sequence of given tree and store it in an arraylist.From this arraylist we can make a BST as we have done befor.
          //print pre-order before
