@@ -64,7 +64,7 @@ public class B_bstToBalancedBST {
                 /               \
                3                 12
          */ 
-        //We have to convert to height balanced binary search tree.
+        //We have to convert this BST to a height balanced binary search tree.
          /*
                         8
                       /   \
