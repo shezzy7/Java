@@ -22,12 +22,13 @@ public class C_sizeOfLargestBSTInBT {
     public static int maxBST=0;//a global variable to store size of max BST
     public static Info sizeOfLargestBST(Node root){
 
-        if(root==null){//if root is null then it means that it is a BST with size of 0 and we will pass +infinity as minimum value from left subtree and -infinity as maximum value from right subtree,so that on calculating min value for other nodes their min and max value will be updated as min will be comparing itself with +infinity and  
+        if(root==null){//if root is null then it means that it is a BST with size of 0 and we will pass +infinity as minimum value from left subtree and -infinity as maximum value from right subtree,so that on calculating min value for other nodes their min and max value will be updated as min will be comparing itself with +infinity and max with -infinity 
             return new Info(true , 0 , Integer.MAX_VALUE ,  Integer.MIN_VALUE );
         }
-        Info leftInfo = sizeOfLargestBST(root.left);
-        Info rightInfo = sizeOfLargestBST(root.right);
-        int size = leftInfo.size + rightInfo.size + 1;
+        Info leftInfo = sizeOfLargestBST(root.left);//cal info of left subtree and store it in a object
+        Info rightInfo = sizeOfLargestBST(root.right);//cal info of right subtree and store it in a object
+        int size = leftInfo.size + rightInfo.size + 1; //size of current node will be equall to size of left subtree and right subtree plus its own size
+        //Note : here size means total number nodes not height or depth 
         int min = Math.min(root.val , Math.min(leftInfo.min , rightInfo.min));
         int max = Math.max(root.val , Math.max(rightInfo.max , leftInfo.max));
 
