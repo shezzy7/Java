@@ -22,13 +22,13 @@ public class C_sizeOfLargestBSTInBT {
     public static int maxBST=0;
     public static Info sizeOfLargestBST(Node root){
         if(root==null){
-            return new Info(true , 0 , Integer.MIN_VALUE ,  Integer.MAX_VALUE );
+            return new Info(true , 0 , Integer.MAX_VALUE ,  Integer.MIN_VALUE );
         }
         Info leftInfo = sizeOfLargestBST(root.left);
         Info rightInfo = sizeOfLargestBST(root.right);
         int size = leftInfo.size + rightInfo.size + 1;
-        int min = Math.min(root.val , leftInfo.min , rightInfo.min);
-        int max = Math.max(root.val , rightInfo.max , leftInfo.max);
+        int min = Math.min(root.val , Math.min(leftInfo.min , rightInfo.min));
+        int max = Math.max(root.val , Math.max(rightInfo.max , leftInfo.max));
 
         if(root.val <= leftInfo.max || root.val>=rightInfo.min){
             return new Info(false,size,min,max);
@@ -36,7 +36,7 @@ public class C_sizeOfLargestBSTInBT {
 
         if(leftInfo.isValid && rightInfo.isValid){
             maxBST = Math.max(maxBST,size);
-            return new Info(true, size, min, max)
+            return new Info(true, size, min, max);
         }
 
         return new Info(false,size,min ,max);
