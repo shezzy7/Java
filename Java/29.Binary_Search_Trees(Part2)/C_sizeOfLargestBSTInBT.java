@@ -8,7 +8,7 @@ public class C_sizeOfLargestBSTInBT {
         }
 
     }
-    static class Info{
+    static class Info{//creating a class which will help in containg info of each node
         boolean isValid;
         int size;
         int max,min;
@@ -19,9 +19,10 @@ public class C_sizeOfLargestBSTInBT {
             this.max = max;
         }
     }
-    public static int maxBST=0;
+    public static int maxBST=0;//a global variable to store size of max BST
     public static Info sizeOfLargestBST(Node root){
-        if(root==null){
+
+        if(root==null){//if root is null then it means that it is a BST with size of 0 and we will pass +infinity as minimum value from left subtree and -infinity as maximum value from right subtree,so that on calculating min value for other nodes their min and max value will be updated as min will be comparing itself with +infinity and  
             return new Info(true , 0 , Integer.MAX_VALUE ,  Integer.MIN_VALUE );
         }
         Info leftInfo = sizeOfLargestBST(root.left);
