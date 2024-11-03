@@ -29,19 +29,19 @@ public class C_sizeOfLargestBSTInBT {
         Info rightInfo = sizeOfLargestBST(root.right);//cal info of right subtree and store it in a object
         int size = leftInfo.size + rightInfo.size + 1; //size of current node will be equall to size of left subtree and right subtree plus its own size
         //Note : here size means total number nodes not height or depth 
-        int min = Math.min(root.val , Math.min(leftInfo.min , rightInfo.min));
-        int max = Math.max(root.val , Math.max(rightInfo.max , leftInfo.max));
+        int min = Math.min(root.val , Math.min(leftInfo.min , rightInfo.min));//get min value for root node
+        int max = Math.max(root.val , Math.max(rightInfo.max , leftInfo.max));//get max value
 
-        if(root.val <= leftInfo.max || root.val>=rightInfo.min){
+        if(root.val <= leftInfo.max || root.val>=rightInfo.min){//compare if root node not making a BST
             return new Info(false,size,min,max);
         }
 
-        if(leftInfo.isValid && rightInfo.isValid){
-            maxBST = Math.max(maxBST,size);
+        if(leftInfo.isValid && rightInfo.isValid){//if root node is also a BST
+            maxBST = Math.max(maxBST,size);//only in this case we will be updating our size of BST
             return new Info(true, size, min, max);
         }
 
-        return new Info(false,size,min ,max);
+        return new Info(false,size,min ,max);//else return false
     }
     public static void main(String args[]){
         /* 
