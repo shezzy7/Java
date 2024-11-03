@@ -8,17 +8,38 @@ public class C_sizeOfLargestBSTInBT {
         }
 
     }
-    public class Info{
+    static class Info{
         boolean isValid;
         int size;
         int max,min;
-
-    }
-
-    public static boolean sizeOfLargestBST(Node root){
-        if(root==null){
-            return true;
+        public Info(boolean isValid , int size , int min , int max){
+            this.isValid = isValid ;
+            this.size = size;
+            this.min = min;
+            this.max = max;
         }
+    }
+    public static int maxBST=0;
+    public static Info sizeOfLargestBST(Node root){
+        if(root==null){
+            return new Info(true , 0 , Integer.MIN_VALUE ,  Integer.MAX_VALUE );
+        }
+        Info leftInfo = sizeOfLargestBST(root.left);
+        Info rightInfo = sizeOfLargestBST(root.right);
+        int size = leftInfo.size + rightInfo.size + 1;
+        int min = Math.min(root.val , leftInfo.min , rightInfo.min);
+        int max = Math.max(root.val , rightInfo.max , leftInfo.max);
+
+        if(root.val <= leftInfo.max || root.val>=rightInfo.min){
+            return new Info(false,size,min,max);
+        }
+
+        if(leftInfo.isValid && rightInfo.isValid){
+            maxBST = Math.max(maxBST,size);
+            return new Info(true, size, min, max)
+        }
+
+        return new Info(false,size,min ,max);
     }
     public static void main(String args[]){
         /* 
@@ -43,6 +64,8 @@ public class C_sizeOfLargestBSTInBT {
 
         //We are given a BT and we are asked to find the size of largest BST in this BT.
 
+        sizeOfLargestBST(root);
+        System.out.println("Size of largest Binary Search Tree is : "+maxBST);
 
     }
 }
