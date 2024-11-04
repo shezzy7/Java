@@ -8,7 +8,7 @@ public class E_mergeTwoBSTs {
             this.left = this.right = null;
         }
     }
-
+    //inorder traversal
     public static void inorderTrav(Node root , ArrayList<Integer> list ){
         if(root == null){
             return;
@@ -44,6 +44,7 @@ public class E_mergeTwoBSTs {
 
     }
 
+    //build BS tree from given array
     public static Node buildBST( ArrayList<Integer> list , int si , int ei){
         if(si>ei){
             return null;
@@ -87,7 +88,7 @@ public class E_mergeTwoBSTs {
         //Approach : If we get inorder traversal of both trees in separate arrays and then merge those arrays so that the resultant array should be also sorted and them from this array we build a BST.
         ArrayList<Integer> list1 = new ArrayList<>();
         ArrayList<Integer> list2 = new ArrayList<>();
-        
+
         //store 1st tree in array
         inorderTrav(root1 , list1);
 
