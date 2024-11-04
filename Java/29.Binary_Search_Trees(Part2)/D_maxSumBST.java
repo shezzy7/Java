@@ -76,7 +76,7 @@ public class D_maxSumBST {
 
         //We are given a BT and we are asked to find the sum of all the nodes of largest BST in this BT.
 
-        sizeOfLargestBST(root);
+        calInfo(root);
         int sum = calSum(maxNode);
         System.out.println("Sum of all the nodes of largest Binary Search Tree is : "+sum);
 
