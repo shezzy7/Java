@@ -24,7 +24,7 @@ public class E_mergeTwoBSTs {
         int j=0;
         
         while(i<list1.size() && j<list2.size()){
-            if(list1.get(i)<list2.get(j)){
+            if(list1.get(i)<=list2.get(j)){
                 mergList.add(list1.get(i));
                 i++;
             }
@@ -55,6 +55,15 @@ public class E_mergeTwoBSTs {
         return root ; 
 
     }
+    //print
+    public static void preorder(Node res){
+        if(res==null){
+            return;
+        }
+        System.out.print(res.val+" ");
+        preorder(res.left);
+        preorder(res.right);
+    }
     public static void main(String[] args) {
         Node root1 = new Node(2);
         root1.left = new Node(1);
@@ -78,16 +87,22 @@ public class E_mergeTwoBSTs {
         //Approach : If we get inorder traversal of both trees in separate arrays and then merge those arrays so that the resultant array should be also sorted and them from this array we build a BST.
         ArrayList<Integer> list1 = new ArrayList<>();
         ArrayList<Integer> list2 = new ArrayList<>();
+        
         //store 1st tree in array
         inorderTrav(root1 , list1);
+
         //store 2nd tree in array
         inorderTrav(root2 , list2);
+
         //now merge these lists
         ArrayList<Integer> mergedList = new ArrayList<>();
         merge(mergedList , list1 , list2);
 
         //after mergin creat a BST using this list
         Node res = buildBST(mergedList , 0 , mergedList.size()-1);
+
+        //now lets print pre order of resultant tree
+        preorder(res);
 
     }
 
