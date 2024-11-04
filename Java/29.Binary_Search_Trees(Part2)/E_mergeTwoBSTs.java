@@ -41,7 +41,19 @@ public class E_mergeTwoBSTs {
             mergList.add(list1.get(j));
             j++;
         }
-        
+
+    }
+
+    public static Node buildBST( ArrayList<Integer> list , int si , int ei){
+        if(si>ei){
+            return null;
+        }
+        int mid = si+(ei-si)/2;
+        Node root = new Node(list.get(mid));
+        root.left = buildBST(list, si, mid-1);
+        root.right = buildBST(list, mid+1, ei);
+        return root ; 
+
     }
     public static void main(String[] args) {
         Node root1 = new Node(2);
@@ -74,7 +86,8 @@ public class E_mergeTwoBSTs {
         ArrayList<Integer> mergedList = new ArrayList<>();
         merge(mergedList , list1 , list2);
 
-
+        //after mergin creat a BST using this list
+        Node res = buildBST(mergedList , 0 , mergedList.size()-1);
 
     }
 
