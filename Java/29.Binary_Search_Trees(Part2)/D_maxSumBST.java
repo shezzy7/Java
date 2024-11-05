@@ -60,7 +60,7 @@ public class D_maxSumBST {
                    /  \    /   \
                   5   20  45    70
                                /   \
-                              65    63
+                              65    80
         */ 
 
         Node root = new Node(50);
@@ -68,10 +68,10 @@ public class D_maxSumBST {
         root.left.left = new Node(5);
         root.left.right = new Node(20);
         root.right = new Node(60);
-        // root.right.left = new Node(45);
-        // root.right.right = new Node(70);
-        // root.right.right.left = new Node(65);
-        // root.right.right.right = new Node(80);
+        root.right.left = new Node(45);
+        root.right.right = new Node(70);
+        root.right.right.left = new Node(65);
+        root.right.right.right = new Node(80);
 
         //We are given a BT and we are asked to find the sum of all the nodes of largest BST in this BT.
 
