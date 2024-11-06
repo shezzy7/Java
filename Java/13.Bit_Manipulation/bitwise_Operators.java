@@ -1,4 +1,4 @@
-//Bitwise operators perorm actions on binary data .if decimal data is given to them then they will it to binary form and then perorm action on it and then convert the result into decimal.
+//Bitwise operators perorm actions on binary data .if decimal data is given to them then they will convert it to binary form and then perorm action on it and then convert the result into decimal.
 //Following are bitWise operatores
 //1-    Binary AND &
 //2-    Binary OR |
