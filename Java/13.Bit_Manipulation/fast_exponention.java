@@ -11,6 +11,6 @@ public class fast_exponention{
             number=number*number;
             power=power>>1;
         }
-        System.out.print(answer);3^4=3*3*3*3=81
+        System.out.print(answer);
     }
 }
