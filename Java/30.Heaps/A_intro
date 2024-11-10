@@ -1,0 +1,6 @@
+We are given data of some students(for example percentage of marks) and we have to arrange this in such a way that the studnet with the maximum percentage should be at top ,  then second higher and so on.So this will give us data in a priority formate.
+Take another example we given data of employes with their ranks of a company and we have to store it in such a way that the employee with highest rankes should pe at top and so on.
+For this type of arrangement of data we use a data structure 'Priority Queue'.
+This is also like queue data structure with basic operations like add , remove , peek.But here instead of FIFO principle , data is inserted according to rank/percentage or given instruction on priority basis.So when we add a new item then it does not mean that it will be added at Rear side , it will be added at correct position according to given priority rule.And also for removing and peek operation we will not the item which was added at first but we will get item with highest priority.
+Time complexity -> add(logn) , remove(logn) , peek(1)
+syntax for intializing -> PriorityQueue<dataType>name = new PriorityQueue<>(); 
