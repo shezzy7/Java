@@ -2,7 +2,7 @@
 //strings can be initialized in two 
 //  1-  String name = "shezzy";
 //  2-  String name = new String("Shezzy");
-public class string{
+public class a_string{
     public static void main(String args[]){
         String str = "Welcome to Strings!";
         System.out.println(str);
