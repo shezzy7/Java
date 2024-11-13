@@ -1,5 +1,5 @@
 import java.util.*;
-public class charAt{
+public class C_charAt{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         //we can also access each element of a string using charAt method

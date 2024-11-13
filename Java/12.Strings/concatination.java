@@ -5,7 +5,7 @@ public class concatination{
         String lastName = "Shahzad";
         String fullName = firstName + " " + lastName;
         System.out.println(fullName);
-        //we can also concat strings runtime
+        //we can also concat strings during runtime
         System.out.println(firstName+" "+lastName);
         System.out.println("Muhammad"+" "+"Hussain");
     }
