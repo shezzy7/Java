@@ -20,12 +20,12 @@ public class largestString{
         //this function also works same but this will ignore capitialization of elements
         String str4 = "Shezzy";
         System.out.println(str1.compareTo(str4));
-        System.out.println(str1.comparetoIgnoreCase(str4));
+        System.out.println(str1.compareToIgnoreCase(str4));
 
         //let we have given am array of strings and we have to find largest string 
         String ptc[] = {"apple","mango","bannana"};
         String largest = ptc[0];
-        for(int i=1;i<ptc.length();i++){
+        for(int i=1;i<ptc.length;i++){
             if(ptc[i].compareTo(largest)>0){
                 largest = ptc[i];
             }

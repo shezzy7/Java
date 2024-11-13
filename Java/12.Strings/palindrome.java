@@ -7,7 +7,8 @@ public class palindrome{
         String str;
         System.out.print("Enter string : ");
         str = sc.nextLine();
-        //for this purpose we will check first half of string with 2nd hald half if any elements does equal to its camparative element then string is not a palindrome
+        //for this purpose we will check first half of string with 2nd hald half if any elements does equal to its camparative element then string is not a palindrome.
+        
         boolean n = true;
         for(int i=0;i<str.length()/2;i++){
             

@@ -1,6 +1,7 @@
 import java.util.*;
 public class removeStars{
     public static String removeStar(String str){
+        //We are given a string of alphabets and stars(*).We have to traverse over this string,whenever we see a '*' n string remove an alphabet present just before this star.
         Stack<Character> st = new Stack<>();
         for(int i=0;i<str.length();i++){
             char ch = str.charAt(i);
@@ -23,7 +24,7 @@ public class removeStars{
     }
 
     public static void main(String args[]){
-        String str = "eraase*****";
+        String str = "eraasse*****";
         String res = removeStar(str);
         System.out.print(res);
     }
