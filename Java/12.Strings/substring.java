@@ -15,6 +15,29 @@ public class substring{
         String subStr2 = str.substring(si,ei);
         System.out.println(subStr2);
         //so  by this method we can aslo get substring of any given string
+        String res = "CALICOUNH";
+        String mainS= "CALICOUNH";
+
+        String temp = "LAL";
+        int count=1;
+        for(int i =0;i<temp.length();i++){
+            char ch = res.charAt(i);
+            if(mainS.contains(ch)){
+                int idx = res.indexOf(ch);
+                
+                if(idx!=-1){
+                    res = res.substring(0, idx) + res.substring(idx+1,res.length());
+                }
+                else{
+                    res = res+"CALICOUN";
+                }
+
+            }
+            else{
+                System.out.println(-1);
+                break;
+            }
+        }
 
     }
 }

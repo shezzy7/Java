@@ -9,9 +9,10 @@ public class D_heap {
             //in case of min-heap current nodes value can be less then its parent node , so in this case we have to swap them
             //we can get parent node's index by formula -> childNodeIndex-1/2
             int x = arr.size()-1;//as we add this elements at last of list so its index will be last index of list.
-            int parent = (x-1)/2;
+            int parent = (x-1)/2;//parent index
 
             while(arr.get(x)<arr.get(parent)){
+                //excahnge values
                 int temp = arr.get(parent);
                 //now swap
                 arr.set(parent , arr.get(x));
@@ -23,6 +24,14 @@ public class D_heap {
         public int peek(){
             return arr.get(0);
 
+        }
+
+        public int remove(){
+            //for removing top element of min heap we take follwing 3 steps
+            //1-Swap first and last element of min-heap.
+            //2-remove last element of min-heap after swaping.
+            //3-After swaping and removing last element from min-heap , we have done our work of removing top of heap but after swaping and removing this element our heap will be un-balanced.To balance it we perform another function name heapify.
+            
         }
     }
     public static void main(String args[]){
@@ -75,6 +84,7 @@ public class D_heap {
         //We get left child of a ith node by 2i+1.And right child by 2i+2.And we can see this by above array
         //left-child of ith element = 2i+1 
         //right-child of ith element = 2i+2 
+
         
 
     }

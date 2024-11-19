@@ -32,7 +32,7 @@ public class D_maxSumBST {
         int min = Math.min(root.val , Math.min(leftInfo.min , rightInfo.min));//get min value for root node
         int max = Math.max(root.val , Math.max(rightInfo.max , leftInfo.max));//get max value
 
-        if(root.val < leftInfo.max || root.val>rightInfo.min){//compare if root node not making a BST
+        if(root.val < leftInfo.max || root.val>rightInfo.min){//compare if root node not making a BST, then return false
             return new Info(false,0,min,max);
         }
 

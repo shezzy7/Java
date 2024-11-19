@@ -53,7 +53,7 @@ public class g_validBST {
         // minimum from rightside of each rrot node.And our root node's value lies
         // between these values then it means that our tree is BST.
 
-        System.out.println(validateBST(root, null, null));// first we will pass nul as our max and min value of our rrot
+        System.out.println(validateBST(root, null, null));// first we will pass null as our max and min value of our rrot
                                                           // node
     }
 }
