@@ -11,27 +11,71 @@ public class D_heap {
             int x = arr.size()-1;//as we add this elements at last of list so its index will be last index of list.
             int parent = (x-1)/2;//parent index
 
-            while(arr.get(x)<arr.get(parent)){
+            while(parent>=0 && arr.get(x)<arr.get(parent)){
                 //excahnge values
                 int temp = arr.get(parent);
                 //now swap
                 arr.set(parent , arr.get(x));
                 arr.set(x,temp);
+                //after swaping update child and parent index
+                x = parent; 
+                parent = (x-1)/2; 
 
             }
         }
         //in min heap's peek method we get minimum element of the heap as see that the element at top of min-heap will be at top of heap(first elemetn of list)
-        public int peek(){
+        public int peek(){//O(1)
             return arr.get(0);
 
         }
 
-        public int remove(){
+        public int remove(){//O(logn)
             //for removing top element of min heap we take follwing 3 steps
             //1-Swap first and last element of min-heap.
             //2-remove last element of min-heap after swaping.
             //3-After swaping and removing last element from min-heap , we have done our work of removing top of heap but after swaping and removing this element our heap will be un-balanced.To balance it we perform another function name heapify.
             
+            //Swap
+            int temp = arr.get(0);
+            arr.set(0,arr.get(arr.size()-1));
+            arr.set(arr.size()-1,temp);
+            //remove get last element
+            int res = arr.remove(arr.size()-1);
+
+            //balance heap
+            heapify(0);//after placing last value of heap at top we have to whether after placing this value at first does our heap is un-balanced if un-balanced then we will balance it
+
+            return res;
+            
+        }
+
+        //we are gonna make this function private as this function belongs heap class only and will be caled automatically whenever we will remove a value from our heap.
+        private void heapify(int i){//O(logn)
+            //to check un-balancy in our heap we have to compare our parent node's value with it left and right child as we are talking about min-heap we parents value must be lower then childs.If not then will have to fix it in following way
+            //get index of right and left child
+            int left = 2*i+1;
+            int right = 2*i+2;
+            //we will assume that our ith value is smallest to compare it with its child
+            int minIdx  = i;
+            if(left<arr.size() && arr.get(left)<arr.get(minIdx)){
+                minIdx=left;
+            }
+            if(right<arr.size() && arr.get(right)<arr.get(minIdx)){
+                minIdx=right;
+            }
+            //now check whether minIdx has changed or remained same,if change then it means that our heap is un-balanced else it is fine and we don't need to do any operation on it
+            if(minIdx!=i){
+                int temp = arr.get(i);
+                arr.set(i,arr.get(minIdx));
+                arr.set(minIdx , temp);
+                //now after swaping we also have to check whether after swaping it our heap is still un-balanced or not if unbalanced then we have to fix it
+                heapify(minIdx);
+            }
+
+        }
+        //check empty
+        public boolean isEmpty(){
+            return arr.size()==0;
         }
     }
     public static void main(String args[]){
@@ -85,7 +129,18 @@ public class D_heap {
         //left-child of ith element = 2i+1 
         //right-child of ith element = 2i+2 
 
-        
+        Heap h = new Heap();
+        h.add(4);
+        h.add(1);
+        h.add(3);
+        h.add(2);
+
+        while(!h.isEmpty()){
+            System.out.print(h.peek()+" ");
+            h.remove();
+        }
+        //here we will see that all the elements are printed in ascending order even we add them randomly.So this is how our priority queue are implementd actually.
+
 
     }
 }
