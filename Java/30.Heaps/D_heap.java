@@ -6,7 +6,7 @@ public class D_heap {
         //add in heap
         public void add(int val){
             arr.add(val);
-            //in case of min-heap current nodes value can be less then its parent node , so in this case we have to swap them
+            //in case of min-heap child node's value that we are adding currently in heap can be less then its parent node , so in this case we have to balance our heap
             //we can get parent node's index by formula -> childNodeIndex-1/2
             int x = arr.size()-1;//as we add this elements at last of list so its index will be last index of list.
             int parent = (x-1)/2;//parent index
@@ -23,7 +23,7 @@ public class D_heap {
 
             }
         }
-        //in min heap's peek method we get minimum element of the heap as see that the element at top of min-heap will be at top of heap(first elemetn of list)
+        //in min heap's peek method we get minimum element of the heap.So as we see that the element at top of min-heap will be the minimum element of  heap(first elemetn of list)
         public int peek(){//O(1)
             return arr.get(0);
 
@@ -35,40 +35,43 @@ public class D_heap {
             //2-remove last element of min-heap after swaping.
             //3-After swaping and removing last element from min-heap , we have done our work of removing top of heap but after swaping and removing this element our heap will be un-balanced.To balance it we perform another function name heapify.
             
-            //Swap
+            //1-Swap
             int temp = arr.get(0);
             arr.set(0,arr.get(arr.size()-1));
             arr.set(arr.size()-1,temp);
-            //remove get last element
+
+            //2-remove get last element
             int res = arr.remove(arr.size()-1);
 
-            //balance heap
-            heapify(0);//after placing last value of heap at top we have to whether after placing this value at first does our heap is un-balanced if un-balanced then we will balance it
+            //3-balance heap
+            heapify(0);//after placing last value of heap at top we have to check  whether after placing this value at first ,  does our heap is un-balanced if un-balanced then we will balance it.And we are placing last element of heap at top(0 index).So it means that if after placing this element at top our heap is un-balanced then we will fix our heap by placing this element at its correct position.So here we are pasiing its index to heapify which will do our work.
 
-            return res;
+            return res;//then return the element that was at top of heap previoulsy saved in variable res.
             
         }
 
-        //we are gonna make this function private as this function belongs heap class only and will be caled automatically whenever we will remove a value from our heap.
+        //we are gonna make this function private as we don't nned to call it from our main function , will be caled automatically whenever we will remove a value from our heap.
         private void heapify(int i){//O(logn)
-            //to check un-balancy in our heap we have to compare our parent node's value with it left and right child as we are talking about min-heap we parents value must be lower then childs.If not then will have to fix it in following way
-            //get index of right and left child
+            //to check un-balancy in our heap we have to compare our parent node's value with its left and right child as we are talking about min-heap our parents value must be lower then childs.If not then will have to fix it in following way
+            //get index of right and left child to compare them with parent node.
             int left = 2*i+1;
             int right = 2*i+2;
-            //we will assume that our ith value is smallest to compare it with its child
+            //we will assume that our ith value is smallest, to compare it with its childs
             int minIdx  = i;
-            if(left<arr.size() && arr.get(left)<arr.get(minIdx)){
+
+            //Then we will compare these parent and child nodes values and will find index of smallest of these three.As our smallest element should be at top(parent's place).
+            if(left<arr.size() && arr.get(left)<arr.get(minIdx)){//we will check first whether our left index is not going out of bounds and value at its position is smaller then it parent's value only in this case we will set our minIdx = left. 
                 minIdx=left;
             }
             if(right<arr.size() && arr.get(right)<arr.get(minIdx)){
                 minIdx=right;
             }
-            //now check whether minIdx has changed or remained same,if change then it means that our heap is un-balanced else it is fine and we don't need to do any operation on it
+            //now check whether minIdx has changed or remained same,if changed then it means that our parent was not smaller then its child nodes so we swap it with its child node whose values is smaller between all of these. 
             if(minIdx!=i){
                 int temp = arr.get(i);
                 arr.set(i,arr.get(minIdx));
                 arr.set(minIdx , temp);
-                //now after swaping we also have to check whether after swaping it our heap is still un-balanced or not if unbalanced then we have to fix it
+                //now after swaping we also have to check whether after swaping it,  our heap is still un-balanced or not if unbalanced then we have to fix it.As we are placing our parent node at minIdx so we will check un-balancy from this index.
                 heapify(minIdx);
             }
 
@@ -140,6 +143,10 @@ public class D_heap {
             h.remove();
         }
         //here we will see that all the elements are printed in ascending order even we add them randomly.So this is how our priority queue are implementd actually.
+
+        //This is a min-heap.
+        //We can convert it into a max-heap by just inversing the conditions while comparing.
+        
 
 
     }
