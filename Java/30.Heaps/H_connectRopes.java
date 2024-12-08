@@ -5,7 +5,6 @@ public class H_connectRopes {
     public static int calCost(int ropes[], int n){
         //We are given n ropes of different lengths ,the task is to connect these ropes into one rope with minimum cost.we can connect 2 ropes at a time and cost to connect them is equall to sum of length of both these ropes.
          
-        //Approach :- Mumtaz  -> Zaheer ul din babar -> hamayun  ->Akbar -> Jehangir ->Shah Jahan
         // Approach --If we get two smallest ropes and connect them and then after connecting add the resultant rope in the list of ropes.After this again get the two ropes with smallest length and add resultant rope in list ropes.And go on doing this until there remain only single rope in the list which will e resultant rope of all the given ropes.
         //For getting smaller rope each time we will use a priority queue.As its first two elements will be smaller of all  the elements.
         PriorityQueue<Integer> pq= new PriorityQueue<>();
