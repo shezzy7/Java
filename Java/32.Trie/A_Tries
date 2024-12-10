@@ -1,0 +1,22 @@
+Trie : It is a tree like data structure.It has multiple names according its uses.Like we also it prefix tree(as we know prefix means very first part of a String/word like disable , dislike etc here dis is prefix.So when we are using same combination of words many times in a word we can save it in one place and use this again and again) , retrieval tree(as they help us in retrieving data from strings) and also call it dgitial trees.In fact trie came from retrieval and they tree in real.
+We use tries in solving some problems related to strings.
+
+Let suppose we have data "the","a","there","any","thee" , "their"
+we want to store it in a trie then we will store it like this
+Note:Our root node in tries is always an empty node.
+
+                                    emptyNode
+                                    /       \
+                                   t         a
+                                  /           \
+                                 h              n
+                                /                \
+                           r-i-e                  y
+                              / \
+                             r   e
+                            /
+                           e
+
+Here we will se that don't store our prefixes twice we use them just once.
+And also we will see that our tree is not a binary tree.We call such type of trees k-ary tree.Mean here number node can be any value.We can make many childs of any node.
+So here time colplexity for many operations also reduces due to balanced height.
