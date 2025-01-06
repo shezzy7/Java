@@ -35,7 +35,7 @@ public class J_slidingWindowMax {
         */
 
         
-        //Appraoch:-Create a PQ in which store value of each elements wiht its index.Then sent the compareTo function for placing greaer elements at top of pq.
+        //Create a PQ in which store value of each elements wiht its index.Then sent the compareTo function for placing greaer elements at top of pq.
         //Create a result array of size nums.length-k+1
 
 
@@ -48,7 +48,7 @@ public class J_slidingWindowMax {
         res[0] = pq.peek().val;
 
         for(int i=k;i<nums.length;i++){
-            while(pq.size()>0 && pq.peek().idx<=(i-k)){//-1,-3 , 5
+            while(pq.size()>0 && pq.peek().idx<=(i-k)){
                 pq.remove();
             }
             pq.add(new Pair(nums[i] , i));
@@ -59,9 +59,5 @@ public class J_slidingWindowMax {
         for(int i=0;i<res.length;i++){
             System.out.print(res[i]+" ");
         }
-
-
-
-
     }
 }

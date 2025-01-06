@@ -20,7 +20,7 @@ public class Q_FindItineraryForTicket{
         //     Quetta -> Islamabad
         //     Karachi -> Lahore
         //     Islamabad -> Karachi
-        // now here we see if first we travel from Lahore to Multan then cannot go anywhere from multan bcz we don't have ticket from  to anyother city.And if we start from Karachi to Lahore then from Lahore we only have tickets of Multan and from Multan we cannot go ahead.And if we make a start from Islamabad then from Islamabd we can go to Karachi,from karachi we can go to Lahore and from Lahore we acn go to Multan and from Multan we cannot go anywhere any we will miss our tour to Quetta. But if we travle from Quetta then from there we can go to Islamabad,Islamabd to Karachi,Karachi to Lahore and from Lahore we can to Multan and this way we can  make our tour successsfull.
+        // now here we see if first we travel from Lahore to Multan then cannot go anywhere from multan bcz we don't have ticket from to anyother city.And if we start from Karachi to Lahore then from Lahore we only have tickets of Multan and from Multan we cannot go ahead.And if we make a start from Islamabad then from Islamabd we can go to Karachi,from karachi we can go to Lahore and from Lahore we acn go to Multan and from Multan we cannot go anywhere any we will miss our tour to Quetta. But if we travle from Quetta then from there we can go to Islamabad,Islamabd to Karachi,Karachi to Lahore and from Lahore we can to Multan and this way we can  make our tour successsfull.
         //  )
         //To overcome this problem first of all we will find place from where we can travel but cannot go there from any city.Like here Quetta.
 

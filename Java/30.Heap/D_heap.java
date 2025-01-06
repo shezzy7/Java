@@ -25,6 +25,9 @@ public class D_heap {
         }
         //in min heap's peek method we get minimum element of the heap.So as we see that the element at top of min-heap will be the minimum element of  heap(first elemetn of list)
         public int peek(){//O(1)
+            if(arr.size()==0){
+                return -1;
+            }
             return arr.get(0);
 
         }
@@ -33,7 +36,7 @@ public class D_heap {
             //for removing top element of min heap we take follwing 3 steps
             //1-Swap first and last element of min-heap.
             //2-remove last element of min-heap after swaping.
-            //3-After swaping and removing last element from min-heap , we have done our work of removing top of heap but after swaping and removing this element our heap will be un-balanced.To balance it we perform another function name heapify.
+            //3-After swaping and removing last element from min-heap , we have done our work of removing top of heap but after swaping and removing this element, our heap will be un-balanced.To balance it we perform another function heapify.
             
             //1-Swap
             int temp = arr.get(0);
@@ -86,7 +89,7 @@ public class D_heap {
             Heap:-Heap is data structure with following properties:
                 1-Binary Tree :- Heap is always a binary tree.Each node contain maximum two child nodes.
                 2-Complete BT :- Complete binary tree is a binary tree where all the levels are completely filled except possibly the last one,which is filled from left to right.
-                3-Heap Order propert :- i- Children >= Parent (Min-heap). ii-Children <= Parent (Max-heap)
+                3-Heap Order propert :- i- Children >= Parent (Min-heap)  . ii-Children <= Parent (Max-heap)
 
                 Exampls Of heap : 
                                      10
@@ -123,9 +126,9 @@ public class D_heap {
                  /  \
                 5    10
          */
-        //Our priority queues as implemented by heaps.
+        //Our priority queues are implemented by heaps.
 
-        //And in java we implement heap by using Array/ArrayList  because if we use class objects as we use them while building a tree , then for adding a new element in a tree will take more time as we will have to traverse over all the nodes to check which place is empty to place this node.And even after finding the empty place we may also see that this position is not good for current val.For example of we see above tree and we want to add a new element 3 in it.Then after traversing over this whole tree we will find that we can make it left child of 4.But we see that it is a min-heap.And 4 is greater than 3 we will have to swap them also.And it will go on increasing complexity of operation.
+        //And in java we implement heap by using Array/ArrayList  because if we use class objects as we use them while building a tree , then for adding a new element in a tree will take more time as we will have to traverse over all the nodes to check which place is empty to place this node.And even after finding the empty place we may also see that this position is not good for current val.For example if we see above tree and we want to add a new element 3 in it.Then after traversing over this whole tree we will find that we can make it left child of 4.But we see that it is a min-heap.And 4 is greater than 3 we will have to swap them also.And it will go on increasing complexity of operation.
         //So for avoiding from this problem we use arraylist.As we can add any element in list with time complexity of O(1).
         //If place values of above min-heap in array that we will represent them as -> {1,2,4,5,10}
         //We get left child of a ith node by 2i+1.And right child by 2i+2.And we can see this by above array
