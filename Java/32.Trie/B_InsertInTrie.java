@@ -34,13 +34,13 @@ public class B_InsertInTrie{
         Node curr = root;
         for(int i=0;i<key.length();i++){
             int idx = key.charAt(i)-'a';
-            if(curr.children[idx]==null){
+            if(curr.children[idx]==null){//if this character is not present at this level then it means this word is not present in this trie and we have to return false
                 return false;
             }
-            curr = curr.children[idx];
+            curr = curr.children[idx];//else we have to check for next word.
         }
 
-        return curr.eow==true;//we will also check that either our given has ended but wheather this word in our trie is also a end word or not.For example we have a word "any" in our trie but user asks for searching "an" in our trie.In that case our trie contains "an" in it but 'n' is not a end of word which means our trie does not contain "an" in it we will return false in it.Bcz our trie originally stored "any" not "an". 
+        return curr.eow==true;//we will also that even we have seen that all the characters present in this word are present in our trie in corect way but it is posssible that those characters are part of any other word.And this word originally is not present in trie.For example we have a word 'there' in our trie and then we want to search for word 'the' here then we will see then all the characters are present in our trie but original we have not inserted 'the' in our trie in this case our for loop will run fine and will not return false.Then we have to check whetehr last character 'e' at which we are is has eow as true or not if true then it means that it is present in our trie else we will return false.
     }
     public static void main(String args[]){
         String words[] = {"the","a","there","their","any","thee"};
