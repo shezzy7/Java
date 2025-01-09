@@ -40,7 +40,7 @@ public class C_wordBreak {
     }
 
     // word-break
-    public static boolean wordBreak(String key) {
+    public static boolean wordBreak(String key) {//(google)
         // base case
         if (key.length() == 0) {
             return true;

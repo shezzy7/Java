@@ -31,7 +31,7 @@ public class B_InsertInTrie{
     // search in trie
     public static boolean search(String key){
         // i have to start search from my root node's children, so will initialize a pointer from root node and from that position i will start search my charcters in its children and if i found it there then i will start searching other chars else i will return false.
-        Node curr = root;
+        Node curr = root; 
         for(int i=0;i<key.length();i++){
             int idx = key.charAt(i)-'a';
             if(curr.children[idx]==null){//if this character is not present at this level then it means this word is not present in this trie and we have to return false
