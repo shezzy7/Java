@@ -27,7 +27,7 @@ public class E_startsWith {
         Node curr = root;
         for(int i=0;i<prefix.length();i++){
             int idx = prefix.charAt(i)-'a';
-            if(curr.children[idx]==null){//if for any char we found null that it means that it is not a part of trie.
+            if(curr.children[idx]==null){//if for any char we found null then it means that it is not a part of our trie.And we will return false.
                 return false;
             }
             curr = curr.children[idx];
