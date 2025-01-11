@@ -24,8 +24,9 @@ public class F_countUniqueSubstr {
         }
         curr.eow=true;
     }
-    // counting unique substrings
+    
     public static int wordCount(Node root){
+
         if(root==null){
             return 0;
         }
