@@ -94,8 +94,9 @@ public class G_LongestWordWithAllPrefixes {
          for(String str : words){
             insert(str);
          }
+         
          findWord(root, new StringBuilder(""));
          System.out.println(ans);
-         
+
     }
 }
