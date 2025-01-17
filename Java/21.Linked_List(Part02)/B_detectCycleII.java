@@ -15,6 +15,7 @@ public class B_detectCycleII{
             Node newNode = new Node(data);
             if(head==null){
                 head=newNode;
+                return;
             }
             Node temp=head;
             while(temp.next!=null){
@@ -44,7 +45,7 @@ public class B_detectCycleII{
             //now we will check that why we come out of our loop whet fats pointer reaches at null or slow and fast reaches at same point showing that cycle is present
             if(slow==fast){
                 //now if we come here we know that cycle is present in list.And now we have to fid starting point of this cycle.
-                //To do this there is a mathematical approach which say that if we run two pointer one from head and other from that point where our slow and fast pointer were meetup and then start moving these two pointers one step ahead,then there will be a point at which these both pointers will meetup and this meetup point will be our startign node.
+                //To do this there is a mathematical approach which say that if we run two pointer one from head and other from that point where our slow and fast pointer  meetup while detecting a cycle and then start moving these two pointers one step ahead,then there will be a point at which these both pointers will meetup and this meetup point will be our startign node.
                 //lets place our slow pointer at head and then start moving these two pointers fast and slow one step each time
                 slow=head;
                 while(slow!=fast){

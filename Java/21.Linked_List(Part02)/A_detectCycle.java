@@ -39,6 +39,7 @@ public class A_detectCycle{
         //lets make a cyclicic linked llist first
         A_detectCycle list = new A_detectCycle();
         list.setNodes();
+        
         boolean res = list.detectCycle();
         if(res){
             System.out.print("Cycle present in list");
