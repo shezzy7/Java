@@ -15,7 +15,50 @@ public class A_graph {
               In this method we represent  a graph in such a way tha we create a list which contains all the vertices in it.And each element in this list contains a list of all the neighbours connected to it.
               Basically we store info of edges for each vertix.Starting position of a edge,ending position and weight of the edge.
           ii-Adjacency Matrix:-
-              
+              In this type of presentation of graph we present our graph in a matrix , where in each cell that a vertex is making with other , we store weight of edge,so that we can see that this vertex is connected to which other vertices and what is weight of each edge
+              In the graph below is vertex 0 is connected to 1,1 is connected to 4 and 3,with weights 4,1,2 respectively.
+
+                   0
+                  /4 
+                 1  
+               1/ \2
+               4   3
+
+               If we have to respresnt this graph in adjacency matrix then we will present it as follows:
+
+                  0     1     3     4
+                ----------------------
+              0 | 0  |  4  | 0  |  0
+                |---------------------
+              1 | 4  |  0  | 2  |  1
+                |---------------------
+              3 | 0  |  2  | 0  |  0
+                |---------------------
+              4 | 0  |  1  | 0  |  0
+
+
+
+              iii-Edge list:-
+                 In an edge list representation, we store information about the edges of
+                 the graph. This information typically includes the starting position (or vertex) of
+                 an edge, the ending position (or vertex) of that edge, and optionally the weight of
+                 that edge.
+
+                       0
+                      /4 
+                     1  
+                   1/ \2
+                   4   3
+
+                 we will present this as follows-> {{0,1,4},{1,4,1},{1,3,2}}
+                 In this list ,each element is containing info of each edge.Starting position of that edge,ending position and weight respecively.
+                 This presentation of graph is helpfull for sorting and some specific conditions else this is not advisible.
+
+              iv-Implicit Graph
+               
+
+
+
               
 
      */
