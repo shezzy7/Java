@@ -15,4 +15,10 @@
 
                                     g-Dependency Graph:We use graphs for making dependency graphs.A dependecy graph is a structure in which we visualize , which thing is depending upon other one.For example if we want to write documentation for some code and we want to use a built in extension.Then we see that this extension is only useable in vscode.So first we have to download vscode.Then we see that for using vscode we must have windows operating system.So all these dependencies can be structured in a dependency graph using graph.
 
+h-Computer vision
 
+i-Flood fill   
+
+i-Graph Database:Some database are also developed using Graphs.Like neo4g etc.
+
+j-Research:Graphs are also used for research purposes.For making neuron type structures  we use graphs.

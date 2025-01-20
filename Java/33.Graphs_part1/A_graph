@@ -1,4 +1,4 @@
-public class A_graph {
+
     
     /*  Graph:-A graph is a network of nodes , in which multiple node are connected tohether with help of edges.Each node in graph is called vertex, and each connecting line connecting a vertex to other is called edge.
      Graph is implemented in many application like google maps etc.
@@ -8,21 +8,8 @@ public class A_graph {
 
         Each edge can contain some weight(+ve/-ve).Graphs those edges contain some weight are called weighted graphs and others are called un-weighted graphs.Weight can be positive or negative.So can see them in pics given here.
         Weight is not like kgs etc.It is just a value setted for a specific edge connecting to vertices.
-
-
-
-
-
-
-
-
-                                 
-
-
-
-
-              
+            
 
      */
     
-}
+
