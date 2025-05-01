@@ -1,9 +1,9 @@
 
         
-    //Linked List is most important data structure.In this elemenrs are    present in the form of nodes.In this elements are present in no contiguous memory.And their size is variable.
+    //Linked List is most important data structure.In this elemenrs are present in the form of nodes.In this elements are present in no contiguous memory.And their size is variable.
     //Time complexity for Inserting a node in linked list is O(1)
     //And for searching operation it has time complexity of O(n)
-    //So due this reasnn whenever we need many time insertin in elements then we prefer likedlist over arraylist  and when we have to search some element then we prefer arraylist over linked list. 
+    //So due this reason whenever we need many time insertin in elements then we prefer likedlist over arraylist  and when we have to search some element then we prefer arraylist over linked list. 
         //Linked list is like a chain of elements connected togehter through some links.Each element in linked list is called a Node.
         //Each node has two parts.One part contains data(value) and 2nd part contains reference to next node(address of next connected node).
         //For defining a linked list we need to make class and then create nodes using objects of this class
@@ -20,6 +20,6 @@
         //Head and Tail
         //Each linked list has two types of special nodes one is Head node and other is Tail.
         //Head is the most first Node of Linked list and Tail is the last node of linked list.Last node does not mean null value it means Last node that has some value after which null value occurs in linked list.
-        //Whenever we ahve to tackle with linked list then we are given only one node of that list  mostly is head node and we can traverse on linked list using this node as this node contains the address of next node and when we reach on next node then this next node contains adress of its next node ans so on.So to perform some operations on linked list we just need Head node of that linked list.
+        //Whenever we have to tackle with linked list then we are given only one node of that list  mostly is head node and we can traverse on linked list using this node as this node contains the address of next node and when we reach on next node then this next node contains adress of its next node ans so on.So to perform some operations on linked list we just need Head node of that linked list.
         //When there is only one node in linked list , then it is Head and Taill of linked list.And its next is null. 
         

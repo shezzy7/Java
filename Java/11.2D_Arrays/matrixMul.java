@@ -26,7 +26,7 @@ public class matrixMul{
         int B[][] = new int[P][N];
         int C[][] = new int[M][N];
         //multiplication b\w tow matrices can be done only if the colSize of 1st array is equall to rowSize of 2nd array
-        //for storing their product in a new array can be done if the rowSize of that resulting array  is equal to rowSize of 1st array and colSide of that resulting array is equall to colSize of 2nd array
+        //for storing their product in a new array can be done if the rowSize of that resulting array  is equal to rowSize of 1st array and colSize of that resulting array is equall to colSize of 2nd array
         System.out.print("Enter "+(M*P)+" elements of A : ");
         for(int i=0;i<M;i++){
             for(int j=0;j<P;j++){

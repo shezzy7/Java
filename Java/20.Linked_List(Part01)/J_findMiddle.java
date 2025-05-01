@@ -11,6 +11,7 @@ public class J_findMiddle{
         public Node(int value){
             this.value = value;
             this.next = null;
+            size++;
         }
     }
     //method to add elements in the list from first side

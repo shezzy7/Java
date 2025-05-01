@@ -14,6 +14,7 @@ public class C_addFirst{
         Node newNode = new Node(data);
         if(head==null){
             head=newNode;
+            return;
         }
         //as onward from first addition in our list our head no more null so we have to add furthure elements in list
         //As our sended value to this has become a node now and we want to add them from first side so we will do it as 

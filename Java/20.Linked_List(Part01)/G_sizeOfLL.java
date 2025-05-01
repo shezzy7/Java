@@ -17,7 +17,7 @@ public class G_sizeOfLL{
         Node next;
         Node(int data){
             this.data = data;
-            this.next = next;
+            this.next = null;
             //as we add a node in list we will increment our size by 1 each time
             size++;
             //and if at any place we remove any node from linked list thenn we will decrement our size by 1 at this time

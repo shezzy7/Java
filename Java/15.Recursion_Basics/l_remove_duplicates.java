@@ -9,7 +9,7 @@ public class l_remove_duplicates{
 
         int cur = oldStr.charAt(idx)-'a';
 
-        if(map[cur]){ //if has been seen before then move to check fro nect char and don't add it to result.
+        if(map[cur]){ //if has been seen before then move to check for next char and don't add it to result.
             removeDup(oldStr,idx+1,map,newStr);
         }
         else{

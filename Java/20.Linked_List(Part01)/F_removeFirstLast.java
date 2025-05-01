@@ -40,9 +40,10 @@ public class F_removeFirstLast{
         }
         Node curNode = head;
         while(curNode!=null){
-            System.outt.print(curNode.data+" ");
+            System.out.print(curNode.data+" ");
             curNode = curNode.next;
         }
+        System.out.println();
     }
     public void removeLast(){
         if(head==null){ //corner case
@@ -88,8 +89,6 @@ public class F_removeFirstLast{
         list.removeLast();
         //now lets print our list
         list.print();
-        
-
 
     }
 }

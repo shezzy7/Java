@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.Collections;
-public class e_inbuiltSort{
+public class d_inbuiltSort{
     public static void main(String args[]){
         //java also has inbuilt methoods for sorting.And for using these methods first we have to include a library 'import java.util.Arrays;' in our code
 

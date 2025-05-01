@@ -6,7 +6,6 @@ public class f_fibonacci{
         }
         int fibnm1=fib(n-1);
         int fibnm2=fib(n-2);
-        System.out.println(fibnm1+fibnm2+" ");
         return fibnm1+fibnm2;
     }
     public static void main(String args[]){

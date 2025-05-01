@@ -11,6 +11,7 @@ public class b_access_specifiers{
         customer1.setPassword(5264);
         //we can also set a function to get password 
         customer1.getPassword();
+        System.out.println(customer1.password);
 
 
 
@@ -36,9 +37,9 @@ class Bank{
     // public         | Yes                             | Yes            |
     
 
-    //It means that we can create attributes and functions with the help thse access specifiers to improve our programm structure and set some constraints that wo can access our data and which part of data
+    //It means that we can create attributes and functions with the help of these access specifiers to improve our programm structure and set some constraints that who can access our data and which part of data
 
-    //let we want to set some attribute ans we want that name of account holder should be used by anyone in the programm but his password should be private. then we can do this as
+    //let we want to set some attribute as we want that name of account holder should be used by anyone in the programm but his password should be private. then we can do this as
 
     public String name;
     private int password;
