@@ -1,2 +1,0 @@
-//Unlike C++ destructors does not exist in java.
-//As the work of destructor is to delete the object which is not in use, And in java there exist a 'Garbage Collector' which performs the function of removing unnecessary objects from programm,it checks all the objects, if any of the objects is not in use then it removes it automatically so we don't need destructors. 
