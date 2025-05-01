@@ -1,12 +1,12 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
-import os
+
 
 import streamlit as st
 
-load_dotenv()
 
-gemini_api_key=os.getenv("GEMINI_API_KEY")
+
+gemini_api_key="AIzaSyDzhRbup3PIpImHLKnVhawfpYTX-3Ep-bM"
 
 model = ChatGoogleGenerativeAI(
     model = "gemini-2.0-flash",
