@@ -2,7 +2,7 @@
 public class F_heapSort {
     
     public static void heapSort(int arr[]){
-        //We are given an array of integers .We have to sort this array in descending order using concept of heap.
+        //We are given an array of integers. We have to sort this array in descending order using concept of heap.
         //First of all we have to keep two things in mind.One is that if we are asked to sort the given array in ascending order then we first make it a max-heap and if we are asked to sort it in descending order then we first make a min-heap.
         //So now first as we are asked to sort it in descending order so first we will make a min-heap.
         //for making it a min-heap we will call heapify function for non-leaf nodes which will make them a min-heap.So for getting non-leaf nodes we will run a loop from sizeOfArray/2 to 0.And all the non-leaf nodes will lie in these indexes.
@@ -19,8 +19,8 @@ public class F_heapSort {
             int temp = arr[0];
             arr[0] = arr[i];
             arr[i] = temp;
-
             heapify(arr, 0, i);
+            
         }
         
     }

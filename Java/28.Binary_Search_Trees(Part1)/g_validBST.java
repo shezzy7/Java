@@ -4,7 +4,8 @@ public class g_validBST {
         Node right, left;
 
         public Node(int data) {
-            val = data;
+            this.val = data;
+
         }
     }
 
@@ -41,7 +42,7 @@ public class g_validBST {
         int values[] = { 1,1,1 };//false
         
         Node root = null;
-        for (int i = 0; i < values.length; i++) {
+        for(int i = 0; i < values.length; i++){
             root = buildBST(root, values[i]);
         }
         // We are given a root node of a Binary.We have to identify whether this tree is
@@ -50,7 +51,7 @@ public class g_validBST {
         // in ascending order then it means then our tree is a valiidate BST.
 
         // Approach 2 : if we get maximum from leftside of our each root node and get
-        // minimum from rightside of each rrot node.And our root node's value lies
+        // minimum from rightside of each root node.And our root node's value lies
         // between these values then it means that our tree is BST.
 
         System.out.println(validateBST(root, null, null));// first we will pass null as our max and min value of our rrot

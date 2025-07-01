@@ -2,7 +2,7 @@ public class subArrays {
     //print subarrays of a given array
     //subarray is a contiguous part of array.An array that is inside another array.
     //for example consider an array [1,2,3,4] , there 10 non-empty sub-arrays of this array .
-    //the sub-arrays are (1),(1,2),(1,2,3),(1,2,3,4),(2),(2,3),(2,3,4),(3),(3,4),(4)
+    //the sub-arrays are [1],[1,2],[1,2,3],[1,2,3,4],[2],[2,3],[2,3,4],[3],[3,4],[4]
     public static void subArrays(int arr[]){
         int count = 0;
 

@@ -6,14 +6,14 @@ public class n_monotonic{
             if(list.get(i)==list.get(i+1)){
                 continue;
             }
-            if(list.get(i)<=list.get(i+1)){
+            if(list.get(i)<list.get(i+1)){
                 if(dec){
                     return false;
                 }
                 inc = true;
                 continue;
             }
-            else(list.get(i)>=list.get(i+1)){
+            else{
                 if(inc){
                     return false;
                 }

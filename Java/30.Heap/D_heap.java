@@ -6,12 +6,13 @@ public class D_heap {
         //add in heap
         public void add(int val){
             arr.add(val);
-            //in case of min-heap child node's value that we are adding currently in heap can be less then its parent node , so in this case we have to balance our heap
-            //we can get parent node's index by formula -> childNodeIndex-1/2
-            int x = arr.size()-1;//as we add this elements at last of list so its index will be last index of list.
+            //in case of min-heap child node's value that we are adding currently in heap can be less then its parent node , so in this case we have to balance our heap(smaller nodes should be at top)
+            // for this purpose we have to compare currently inserted value with its parent, if currenly inserted value is smaller then in this case we have to swap parent with child and continue so on until heap is balanced
+            //we can get parent node's index by formula -> (childNodeIndex-1)/2
+            int x = arr.size()-1;//as we add  element at last of list so its index will be last index of list.
             int parent = (x-1)/2;//parent index
 
-            while(parent>=0 && arr.get(x)<arr.get(parent)){
+            while(parent>=0 && arr.get(x)<arr.get(parent)){ //we will continue swaping values until parent value is less then currenly inserted value and we reach at top.
                 //excahnge values
                 int temp = arr.get(parent);
                 //now swap
@@ -19,7 +20,7 @@ public class D_heap {
                 arr.set(x,temp);
                 //after swaping update child and parent index
                 x = parent; 
-                parent = (x-1)/2; 
+                parent = (x-1)/2;
 
             }
         }
@@ -29,14 +30,13 @@ public class D_heap {
                 return -1;
             }
             return arr.get(0);
-
         }
 
         public int remove(){//O(logn)
-            //for removing top element of min heap we take follwing 3 steps
+            //for removing top element of min heap we dp follwing 3 steps
             //1-Swap first and last element of min-heap.
             //2-remove last element of min-heap after swaping.
-            //3-After swaping and removing last element from min-heap , we have done our work of removing top of heap but after swaping and removing this element, our heap will be un-balanced.To balance it we perform another function heapify.
+            //3-After swaping and removing last element from min-heap , we have done our work of removing top of heap but after swaping and removing this element, our heap will be un-balanced.To balance it we'll perform another function heapify.
             
             //1-Swap
             int temp = arr.get(0);
@@ -66,6 +66,7 @@ public class D_heap {
             if(left<arr.size() && arr.get(left)<arr.get(minIdx)){//we will check first whether our left index is not going out of bounds and value at its position is smaller then it parent's value only in this case we will set our minIdx = left. 
                 minIdx=left;
             }
+            
             if(right<arr.size() && arr.get(right)<arr.get(minIdx)){
                 minIdx=right;
             }
@@ -118,6 +119,7 @@ public class D_heap {
                  /  \
                 1    2
          */
+        // 10,4,5,1,2
         //Min Heap :- In min heap element with lower value is prioritized over greater ones.
         /*
                     1
@@ -126,6 +128,7 @@ public class D_heap {
                  /  \
                 5    10
          */
+        // 1,2,4,5,10
         //Our priority queues are implemented by heaps.
 
         //And in java we implement heap by using Array/ArrayList  because if we use class objects as we use them while building a tree , then for adding a new element in a tree will take more time as we will have to traverse over all the nodes to check which place is empty to place this node.And even after finding the empty place we may also see that this position is not good for current val.For example if we see above tree and we want to add a new element 3 in it.Then after traversing over this whole tree we will find that we can make it left child of 4.But we see that it is a min-heap.And 4 is greater than 3 we will have to swap them also.And it will go on increasing complexity of operation.
@@ -154,3 +157,37 @@ public class D_heap {
 
     }
 }
+
+// // add
+// list.add(ele);
+// ch=list.size()-1;
+
+// par = (ch-1)/2;
+
+// while par>=0 and list.get(ch)>list.get(par){
+//     temp=list.get(ch);
+//     list.set(ch , list.get(par))
+//     list.set(par,temp)
+//     ch=par;
+//     par = (ch-1)/2
+// }
+
+
+// // remove
+// temp=list.get(0);
+// list.set(0 , list.get(list.size()-1))
+// list.remove(list.size()-1)
+
+
+// ch1 = 2*i+1
+// ch2 = 2*i+2
+// minIdx=i
+// if arr.get(ch1)>arr.get(minIdx):
+//     minIdx=ch1
+// if arr.get(ch2)>arr.get(minIdx):
+//     minIdx=ch2
+
+// if minIdx!=i:
+//     swap(minIdx_val and i_val)
+//     heapify(minIdx)
+// return temp;

@@ -17,7 +17,7 @@ public class B_createTreeUsingPreorder {
 
         public static Node buildTree(int nodes[]) {
             idx++;
-            if (nodes[idx] == -1) {//-1 represents a null node
+            if (nodes[idx] == -1) {//-1 represents a null node.As we've stored -1 in nodes array at which position we want at add null node
                 return null;
             }
             // kaam
@@ -35,9 +35,13 @@ public class B_createTreeUsingPreorder {
     public static void main(String args[]) {
         // Building a tree with preorder method
         int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
+
         BinaryTree tree = new BinaryTree();
         Node root = tree.buildTree(nodes);
         System.out.print(root.data + " ");
 
     }
 }
+
+
+

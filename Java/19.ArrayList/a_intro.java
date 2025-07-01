@@ -9,8 +9,10 @@ public class a_intro{
     public static void main(String args[]){
         //lets create an Arraylist for storing integr type data
         ArrayList <Integer> list = new ArrayList<>();
+
         //another arraylist for storing string type data
         ArrayList <String> list2 = new ArrayList<>();
+        
         //for boolean data
         ArrayList <Boolean> list3 = new ArrayList<>();
     }

@@ -30,11 +30,14 @@ public class F_levelOrderTraversal {
         List<List<Integer>>ls = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
         Queue<Node> q = new LinkedList<>();
+
         q.add(root);
         q.add(null);//adding a null which will identify that we have completed a level.
         while(!q.isEmpty() && q.peek()!=null){
             if(q.peek().left!=null){//if current node has a left child then add it to queue.
+                
                 q.add(q.peek().left);
+
             }
             if(q.peek().right!=null){ //if current node has a right child then add it to queue.
                 q.add(q.peek().right);

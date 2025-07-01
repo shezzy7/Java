@@ -4,29 +4,42 @@
           i-Adjacency List:-List of lists
               In this method we represent  a graph in such a way tha we create a list which contains all the vertices in it.And each element in this list contains a list of all the neighbours connected to it.
               Basically we store info of edges for each vertix.Starting position of a edge,ending position and weight of the edge.
+              Lets suppose we are given this graph
+                    0
+                  / 
+                 1  
+               / \
+               4--3
+
+               Here we see that 0 is connected to 1 only.1 is connected to 0,4 and 3. 4 is connected to 1 and 3. And 3 is connected to 1 and 4. If we want to represent this graph in the form of adjacency list than we will do this as 
+                0 -> [1]
+                1 -> [0,4,3]
+                4 -> [1,3]
+                3 -> [1,4]
+              Basically every vertix will store info of its all neighbours.
           ii-Adjacency Matrix:-
-              In this type of presentation of graph we present our graph in a matrix , where in each cell that a vertex is making with other , we store weight of edge,so that we can see that this vertex is connected to which other vertices and what is weight of each edge
+              In this type of presentation of graph, we present our graph in a matrix , where in each cell that a vertex is making with other , we store weight of edge,so that we can see that this vertex is connected to which other vertices and what is weight of each edge
               In the graph below is vertex 0 is connected to 1,1 is connected to 4 and 3,with weights 4,1,2 respectively.
 
                    0
-                  /4 
+                  / 
                  1  
-               1/ \2
-               4   3
+               / \
+               4  3
 
                If we have to respresnt this graph in adjacency matrix then we will present it as follows:
 
                   0     1     3     4
                 ----------------------
-              0 | 0  |  4  | 0  |  0
+              0 | 0  |  1  | 0  |  0
                 |---------------------
-              1 | 4  |  0  | 2  |  1
+              1 | 1  |  0  | 1  |  1
                 |---------------------
-              3 | 0  |  2  | 0  |  0
+              3 | 0  |  1  | 0  |  0
                 |---------------------
               4 | 0  |  1  | 0  |  0
 
-
+              This method of representing our graph in code is not good.As here we use O(n*n) space.And also if we want to find connections of a matrix we need to traverse over all the list of this vertex and this will be using O(n) time.And these things make adjacency matrix bad as compared to adjacency list. 
 
               iii-Edge list:-
                  In an edge list representation, we store information about the edges of
@@ -45,5 +58,5 @@
                  This presentation of graph is helpfull for sorting and some specific conditions else this is not advisible.
 
               iv-Implicit Graph
-
+                  In this method we are given a 2D matrix and we can imagine this as graph and can implement graph methods on it.As we know that
                

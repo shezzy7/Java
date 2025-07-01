@@ -1,4 +1,5 @@
 def search(arr,target):
+    # Search in rotated sorted array
     # We are given an array of integers sorted in ascending order with unique elements.After sorting array can be rotated at a partiular index.And we are given a target element.We have to find index of this element in this array and return it if target is not found then return -1.
     # We have to write an algorithm that should run with time complexity of O(log n)
     start = 0
