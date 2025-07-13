@@ -21,7 +21,6 @@ public class E_BFS {
         graph[2].add(new Edge(2,1,1));
         graph[2].add(new Edge(2,3,1));
         graph[2].add(new Edge(2,4,2));
-
         // 3 edge
         graph[3].add(new Edge(3,2,1));
         graph[3].add(new Edge(3,1,3));
