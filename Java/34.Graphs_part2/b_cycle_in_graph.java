@@ -32,11 +32,11 @@ public class b_cycle_in_graph {
         
         // vertex 2
         graph[2].add(new Edge(2, 0));
-        // graph[2].add(new Edge(2, 3));
+        graph[2].add(new Edge(2, 3));
         
         // vertex 3
         graph[3].add(new Edge(3, 1));
-        // graph[3].add(new Edge(3, 2));
+        graph[3].add(new Edge(3, 2));
         graph[3].add(new Edge(3, 4));
 
         // vertex 4
@@ -94,9 +94,9 @@ public class b_cycle_in_graph {
          * 
          * 
          * 0------1----3-----4
-         * \ |
-         * \ |
-         * 2--
+         * \      |
+         *  \     |
+         *    2---
          * 
          */
         ArrayList<Edge>[] graph = new ArrayList[5];
