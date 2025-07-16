@@ -9,7 +9,7 @@
 
 import java.util.*;
 
-public class b_cycle_in_graph {
+public class b_cycle_in_undirected_graph {
     static class Edge {
         int src, dest;
         
