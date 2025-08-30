@@ -30,33 +30,31 @@ public class b_all_paths_from_src_to_target {
 
     }
 
-    public static void dfs(ArrayList<Edge>Graph []){
+    public static void dfs(ArrayList<Edge>Graph [] , int src , int target , String path){
         // In this problem we have to print all the paths from a given src to given target.
         // we can take start fro src and then start traversing to its neighbours one by one.By traversing through one neighbour continue adding their values to current path.If target found through this path then add that path in all paths container.
         // Then coming back from this path to check all the other neighbours remove nextly added vertex from current path.
         // For this purpose we can use an arraylist of arraylist for storing all the paths.And a single arraylist for storing current path. 
-        ArrayList<ArrayList<Integer>> ls = new ArrayList<>();
-        int target = 1;
-        int src = 5;
+        // ArrayList<ArrayList<Integer>> ls = new ArrayList<>();
+        
         if(src==target){
-            System.out.println(src);
+            System.out.println(path);
             return;
         }
         for(int i=0;i<Graph[src].size();i++){
             Edge e =  Graph[src].get(i);
-            ArrayList<Integer>temp = new ArrayList<>();
-
-            temp.add(src);
-            check_path(Graph , e.dest , ls , temp , target);
-
+            // ArrayList<Integer>temp = new ArrayList<>();
+            // temp.add(src);
+            // check_path(Graph , e.dest , ls , temp , target);
+            dfs(Graph , e.dest , target , path+e.dest);
         }
-        for(int i=0;i<ls.size();i++){
-            System.out.println("Path "+(i+1));
-            for(int j=0;j<ls.get(i).size();j++){
-                System.out.print(ls.get(i).get(j)+" ");
-            }
-            System.out.println();
-        }
+        // for(int i=0;i<ls.size();i++){
+        //     System.out.println("Path "+(i+1));
+        //     for(int j=0;j<ls.get(i).size();j++){
+        //         System.out.print(ls.get(i).get(j)+" ");
+        //     }
+        //     System.out.println();
+        // }
         
     }
 
@@ -77,7 +75,9 @@ public class b_all_paths_from_src_to_target {
         int V = 6;
         ArrayList<Edge>[] Graph = new ArrayList[V];
         create_graph(Graph);
-        dfs(Graph);
+        int src = 4;
+        int target= 1;
+        dfs(Graph , src , target , src+"");
 
 
 

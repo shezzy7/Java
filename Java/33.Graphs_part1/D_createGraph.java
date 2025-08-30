@@ -14,7 +14,7 @@ public class D_createGraph {
     }
     public static void main(String args[]){
         // Here we will create a graph by using adjacency list(List of lists).
-        // For doing so ,  we will creat an array of arraylists.Each arraylist will contain all the newtwork of a vertix.Mean type of each arraylist will be of Edge.An edge is contains all the the information about a node(node's start,node's end , wight of edge connecting these nodes.)
+        // For doing so ,  we will creat an array of arraylists.Each arraylist will contain all the newtwork of a vertix.Mean type of each arraylist will be of Edge.An edge is contains all the information about a node(node's start,node's end , wight of edge connecting these nodes.)
         // If a vertex is making some connections to other edges then , we will store  info its value , value of node connected to it and weight of edge connecting them.
         /* 
 

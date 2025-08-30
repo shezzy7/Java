@@ -54,7 +54,7 @@ public class f_nQueens2{
         System.out.println();
     }
     public static void main(String args[]){
-        // In this question we have to check whether there eixist a way to place our queens in n*n matrix.
+        // In this question we have to check whether there exist a way to place our queens in n*n matrix.
         //If there exist some ways to place queens then we have to print only one of them.
         int n=4;
         char board[][] = new char[n][n];

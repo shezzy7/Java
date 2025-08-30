@@ -55,7 +55,7 @@ public class F_DFS {
 
          -This continues until we reach a vertex with no unvisited neighbors.
 
-         -Then we backtrack and continue with the next unvisited neighbor of the previous vertex.
+         -Then we backtrack and continue with the next unvisited neighbor of the previous verteces.
 
 */
         // Visit current vertex
@@ -92,7 +92,7 @@ public class F_DFS {
         // before visiting we must have a list that will be helping us to identify wheather a vertex is visited or not
         boolean visited[] = new boolean[V]; //by default value of each index is setted to false.
         
-        dfs(graph,visited , 0);
+        dfs( graph , visited , 0);
 
     }
 }

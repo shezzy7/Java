@@ -1,0 +1,93 @@
+import java.util.ArrayList;
+import java.util.PriorityQueue;
+
+public class c_primes_algo {
+    static class Edge{
+        int src , dest  ,weight;
+        public Edge(int src , int dest , int weight){
+            this.src = src;
+            this.dest = dest;
+            this.weight = weight;
+        }
+    }
+    
+    static class Pair implements Comparable<Pair>{
+        int val , cost;
+        public Pair(int vertex  ,  int cost){
+            this.val = vertex;
+            this.cost = cost;
+        }
+
+        @Override
+        public int compareTo(Pair P2){
+            return this.cost-P2.cost;
+        }
+        
+    }
+    public static void buildGraph(ArrayList<Edge>Graph[]){
+        for(int i=0;i<Graph.length;i++){
+            Graph[i] = new ArrayList<>();
+        }
+
+        Graph[0].add(new Edge(0,1 , 10));
+        Graph[0].add(new Edge(0,2 , 15)); 
+        Graph[0].add(new Edge(0,3 , 30));
+
+        Graph[1].add(new Edge(1,0 , 10));
+        Graph[1].add(new Edge(1,3 , 40));
+
+        Graph[2].add(new Edge(2,0 , 15));
+        Graph[2].add(new Edge(2,3 , 50));
+
+        Graph[3].add(new Edge(3,0 , 30));
+        Graph[3].add(new Edge(3,1 , 40));
+        Graph[3].add(new Edge(3,2 , 50));
+
+
+
+    }
+    public static int primesAlgo(ArrayList<Edge>Graph[] , int src){
+        // we can get those edges in this connected , weighted graph  , with the help of which we can traverse over the whole graph with minimum cost.It means that we can find those edges with the help of which we can traverse over whole graph with the least cost.Here cost means weight of edges.It means that we will remove all the other paths and no cycle will be present in this graph.
+
+        // for this purpose we will be using PQ(min-heap) and a visiting array
+        // we can take any vertex as starting vertex and cost for this will be 0 as this is the starting vertex
+        // In our PQ we will be adding each vertex with the cost it takes for reaching to it.
+        PriorityQueue<Pair>pq = new PriorityQueue<>();
+        pq.add(new Pair(src, 0));
+
+        boolean visited[] = new boolean[Graph.length];
+        int cost = 0;
+        while (!pq.isEmpty()){
+            Pair curr = pq.remove();
+            if (visited[curr.val]){
+                continue;
+            }
+            cost+=curr.cost;
+            for(int i=0;i<Graph[curr.val].size();i++){
+                Edge e = Graph[curr.val].get(i);
+                int dest = e.dest;
+                int weight = e.weight;
+                // if(visited[dest]){
+                //     continue;
+                // }
+                pq.add(new Pair(dest, weight));
+            }
+            visited[curr.val] = true;
+
+        }
+
+        return cost;
+
+
+    }
+    public static void main(String args[]){
+        // We are given a graph and we have to calculate sum of all the edges weights of MST from this graph
+        // For this purpose we will use prime's algorithm
+        int V = 4;
+        ArrayList<Edge> graph[] = new ArrayList[V];
+        buildGraph(graph);
+        int src = 1;
+        System.out.println(primesAlgo(graph , src));
+        
+    }
+}

@@ -14,9 +14,10 @@ public class c_dijkastras_algo {
         for(int i=0;i<Graph.length;i++){
             Graph[i] = new ArrayList<>();
         }
+
         Graph[0].add(new Edge(0, 1, 2));
         Graph[0].add(new Edge(0, 2, 4));
-        Graph[0].add(new Edge(0, 2, 4));
+        Graph[0].add(new Edge(0, 3, 4));
 
         Graph[1].add(new Edge(1, 2, 1));
         Graph[1].add(new Edge(1, 3, 7));
@@ -72,7 +73,10 @@ public class c_dijkastras_algo {
                     
                         if(distances[e.dest]>distances[e.src]+e.weight){
                             distances[e.dest] = distances[e.src]+e.weight;
-                        pq.add(new Pair(e.dest, distances[e.dest]));
+                            if(!visited[e.dest]){
+
+                                pq.add(new Pair(e.dest, distances[e.dest]));
+                            }
                         }
                         
                     

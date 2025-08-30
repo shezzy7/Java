@@ -99,7 +99,7 @@ public class a_connected_components {
         // dfs_util which will perform traversing over this vertex and all the
         // neighbours connected to this vertex will be traversed through this way.When
         // all the verteces present in this component will be traversed we will moving
-        // forward to other components which are not traversed ye.
+        // forward to other components which are not traversed yet.
         dfs(graph);
 
     }

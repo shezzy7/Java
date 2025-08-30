@@ -1,0 +1,15 @@
+🧠 What is Dynamic Programming (DP)?
+Dynamic Programming is a way to solve problems by breaking them into smaller parts, solving each part only once, and reusing those answers to solve the bigger problem.
+
+It helps you save time by not solving the same thing again and again.
+
+
+Example : Lets suppose we are asked to find fibbonacci of some number n.For this purpose we know two ways recursive and iterative.We know while doing this thing with the help of recursion we calculate fibbonacci of n-1 then n-2 and add the result to get the final answer.
+Lets supose our number is 4
+So first of all we will make a call for fib(n-1) + fib(n-2) mean fibbonacci of 3 and of 2
+When we will make a call to calculate fibbonacci for 3 then it will make a call to calculate fib(n-1) + fib(n-2) mean fibbonacci of 2 and of 1
+Here we will get fibbonacci of 2 and 1
+Now if we go to first step in which we make a call to calculate fibbonacci for  3 and 2.We see that while calculating fibbonacci for 3 here we have also calculated fibbonacci of 2.As we have calculated fibbonacci of 2 already , so there is no need to calculate its fibbonacci again.So for this purpose we will store the value of fibbonacci of each number inside an array so that we can get its answer directly from there instead of calculating it again.So this process of remembering things in DP is known as Memoization.
+
+So Main Benefit of DP are Avoids repeating work and makes code faster.
+

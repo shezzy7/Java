@@ -47,9 +47,10 @@ public class b_cycle_in_undirected_graph {
     public static boolean dfs(ArrayList<Edge>[] graph) {
         boolean visited[] = new boolean[graph.length];
         for (int i = 0; i < graph.length; i++) {
+
             if (!visited[i]) {
                 
-                if (detect_cycle(graph, visited, i, -1)) {
+                if (detect_cycle(graph, visited, i, -1)) { //here we are setting neighbour of first starting node as -1 , bcz we know that there is no vertex with value 1
                     return true;
                 }
             }
@@ -62,20 +63,21 @@ public class b_cycle_in_undirected_graph {
         // Approach
         // On a node there are three stages:
         //     i- a neighbour of this node is not visited
-        //     ii-a neighbour of current node is visited and parent(we are coming to current node through this parent)
+        //     ii-a neighbour of current node is visited and is parent(we are coming to current node through this parent)
         //     iii- a neighbour of current node is visited but not its parent(it means that this node has been visited before and we can go to this node from another node without returning back than it means it is making a cycle at this point).So we have to check for such node if such node exists than cycle is present else not
         visited[curr] = true;
 
-        for (Edge e : graph[curr]) {
-            if (!visited[e.dest]) {
+        for (Edge e : graph[curr]) { 
+            if (!visited[e.dest]) { //case i in which a neighbour is not visited and in this case we will visit it , and this current vertex will be its parent now.
                 if (detect_cycle(graph, visited, e.dest, curr)) {
                     return true;
                 }
             } else {
-                if (e.dest != par) {
+                if (e.dest != par) { //case iii in which neighbour is visited but also is not parent , which means that we have gone through this vertex before but not through this vertex , which means that we can go to this neighbour through current vertex and we can come to current vertex through this neighbour and definitely in this case there will be a cycle.
                     return true;
                 }
-            }
+            } 
+            //in case ii we have nothing to do we will just continue the process.
 
         }
         return false;

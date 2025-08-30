@@ -30,13 +30,13 @@ public class C_wordBreak {
         Node curr = root;
         for (int i = 0; i < key.length(); i++) {
             int idx = key.charAt(i) - 'a';
-            if (curr.children[idx] == null) {
+            if (curr.children[idx] == null) { //if index for this character.
                 return false;
             }
-            curr = curr.children[idx];
+            curr = curr.children[idx]; //now we have to look for next character so we will go one step deep through current path at which our current character is present.
         }
 
-        return curr.eow == true;
+        return curr.eow == true; //once all the characters are found in the trie then we will see wheather this last character of key which is also present in trie , is it eow of a word as in this case it will be a separate word otherwise it will be a part of some other word.
     }
 
     // word-break
@@ -48,8 +48,10 @@ public class C_wordBreak {
 
         for (int i = 1; i <= key.length(); i++) {
             // check for first part
-            if (search(key.substring(0, i))
-                && wordBreak(key.substring(i))) {
+            if (search(key.substring(0, i)) //if a part return false then we will increase the length of our part.
+                && 
+                // once a part is checked and we found that it is present in our key then will do same functionality for next part we will be return true if all the parts return true.
+                wordBreak(key.substring(i))) {
                 return true;
             }
         }

@@ -1,4 +1,4 @@
-Trie : It is a tree like data structure.It has multiple names according its uses.Like we also it prefix tree(as we know prefix means very first part of a String/word like disable , dislike etc here dis is prefix.So when we are using same combination of words many times in a word we can save it in one place and use this again and again) , retrieval tree(as they help us in retrieving data from strings) and also call it dgitial trees.In fact trie came from retrieval and they tree in real.
+Trie : It is a tree like data structure.It has multiple names according its uses.Like we also call it prefix tree(as we know prefix means very first part of a String/word like disable , dislike etc here dis is prefix.So when we are using same combination of words many times in a word we can save it in one place and use this again and again) , retrieval tree(as they help us in retrieving data from strings) and also call it dgitial trees.In fact trie came from retrieval and they are tree in real.
 We use tries in solving some problems related to strings.
 
 Let suppose we have data "the","a","there","any","thee" , "their"

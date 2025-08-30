@@ -44,8 +44,8 @@ public class d_cycle_in_directed_graph {
         // here we will be using two arrays for cheking visiting status of a vertex.One
         // visiting array be working like our previous array which we used for tracking
         // visited nodes and it will work simple.But other array will be working such
-        // like that if we have visited a node we will set as visited and will go to its
-        // neighbours.If any of its neihbours told that cycle exists then fine else
+        // like that if we have visited a node we will set this as visited and will go to its
+        // neighbours.After traversing over all the connected neighbours and neighbours of neighbours we found any cycle then we will return true otherwise while backtracking we will set visiting value of this vertex as false
         // while backtracking we will set it as not visited in our that other visiting
         // array.The reason is that when we go back and come to that node again from
         // some other vertex then its status will be visited here , but as we have seen
@@ -61,14 +61,14 @@ public class d_cycle_in_directed_graph {
         st[curr] = true;
         for (int i = 0; i < Graph[curr].size(); i++) {
             int neighbour = Graph[curr].get(i).dest;
-            if (st[neighbour]) {
+            if (st[neighbour]) { // 
                 return true;
             }
             if (!visited[neighbour]) {
                 if (isCycle(Graph, neighbour, visited, st)) {
                     return true;
                 }
-                st[neighbour] = false;
+                st[neighbour] = false; //setting its visiting value as false in st bcz while calling isCycle function for this neighbour its value was setted to true in st and visited both and also its found not a part of any cycle.But we will keep its value as true in visited array just to make sure that we don't to look up for its neighbours again.
             }
 
         }
@@ -82,9 +82,9 @@ public class d_cycle_in_directed_graph {
          * Directed Graph
          * 
          * 0--------> 1 <-------3
-         * | /\
-         * | /
-         * \/ /
+         * |         /\
+         * |         /
+         * \/       /
          * 2 ------
          * 
          * 
