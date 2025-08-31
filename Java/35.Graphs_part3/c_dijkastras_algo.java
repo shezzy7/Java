@@ -37,9 +37,9 @@ public class c_dijkastras_algo {
 
     }
     static class Pair implements Comparable<Pair>{
-        int v , d;
+        int src , d;
         public Pair(int v , int d){
-            this.v = v;
+            this.src = v;
             this.d = d;
         }
 
@@ -53,11 +53,13 @@ public class c_dijkastras_algo {
         // set distances for each node from src.At first we will set infinite distance for each so that at first time we can compare distance of current path with distance already node have, and we can update it with our new value
         // we will set distances of src from itself as 0 bcz it is 0
         for(int i=0;i<Graph.length;i++){
+            // distance for src should be 0 and for all other should be positive infinity as we have to compare it later.
             if(i==src){
                 distances[i]=0;
-                continue;
             }
-            distances[i]=Integer.MAX_VALUE;
+            else{
+                distances[i]=Integer.MAX_VALUE;
+            }
         }
         boolean visited[] = new boolean[Graph.length];
         // min distance of a vertex v to vertex u is = min(distce[v]+wieght(v,u) , distance(u))
@@ -65,11 +67,11 @@ public class c_dijkastras_algo {
         pq.add(new Pair(src,0)); //distance of src will be 0 to itself
         while(!pq.isEmpty()){
             Pair p = pq.remove();
-            if(!visited[p.v]){
+            if(!visited[p.src]){
                 
-                visited[p.v]=true;
-                for(int i=0;i<Graph[p.v].size();i++){
-                    Edge e = Graph[p.v].get(i);
+                visited[p.src]=true;
+                for(int i=0;i<Graph[p.src].size();i++){
+                    Edge e = Graph[p.src].get(i);
                     
                         if(distances[e.dest]>distances[e.src]+e.weight){
                             distances[e.dest] = distances[e.src]+e.weight;
@@ -92,9 +94,7 @@ public class c_dijkastras_algo {
 
 
     }
-    public static void cal_dist(ArrayList<Edge>Graph[] , int src , int distance[]){
-
-    }
+    
     public static void main(String args[]){
         int V = 6;
         ArrayList<Edge> Graph[] = new ArrayList[V];
