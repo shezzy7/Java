@@ -1,0 +1,6 @@
+There are three types of knapsack problems.
+ i-  Fractional knapsack(Also done in greedy algo's chapter)
+ ii- 0-1 knapsack 
+ iii- Unbounded knapsack
+
+knapsack means a bag , in Fractional knapsack problems we can take frations of some items ,  in 0-1 knapsack problem we add a item or not and we cannot make fractions of itmes like we can do in fractional knapsack and the third one is Unbounded knapsack in which are given names of items and cost of each item , but there is no count of items , count of items is infinite there mean we can pick any item as many time as many time we want.
