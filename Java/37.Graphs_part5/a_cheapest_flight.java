@@ -24,8 +24,9 @@ public class a_cheapest_flight{
         for (int i=0;i<Graph.length;i++){
             Graph[i] = new ArrayList<>();
         }
+
         for(int i=0;i<flights.length;i++){
-            int src = flights[i][0]; 
+            int src = flights[i][0];
             int dest = flights[i][1];
             int price = flights[i][2];
             Graph[src].add(new Edge(src , dest , price));
@@ -90,7 +91,7 @@ public class a_cheapest_flight{
                 if (curr.cost+e.wt<distances[e.dest]){
                     distances[e.dest] = curr.cost+e.wt;
                 }
-
+                
                 // also add info about current neighbour in queue
                 q.add(new Info(e.dest , curr.cost+e.wt , curr.stops+1));
 
