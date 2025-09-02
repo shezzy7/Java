@@ -21,7 +21,7 @@ public class b_0_1_knapsack{
             // two case
             // i-Include
             int ans1 = val[n-1] + knapsack(val, wt, W-wt[n-1], n-1);
-            // exclude
+            // ii-exclude
             int ans2 = knapsack(val, wt, W, n-1);
 
             // then we need to return maximum of both
